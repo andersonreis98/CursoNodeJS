@@ -1,0 +1,16 @@
+<div id='book-page'>
+	<a href='/books'>
+		Voltar para a lista de livros
+	</a>
+	<h1>
+		{{book.TITLE}}
+	</h1>
+	<p>
+		Este livro tem {{book.PAGEQTY}} páginas.
+	</p>
+	<div class='actions'>
+		<a href='/books/edit/{{book.ID}}'>
+			Editar
+		</a>
+	</div>
+</div>
