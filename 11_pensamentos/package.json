@@ -1,0 +1,28 @@
+{
+  "name": "11_pensamentos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js localhost 3000"
+  },
+  "keywords": [],
+  "author": "Anderson Reis Nascimento",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "connect-flash": "0.1.1",
+    "cookie-parser": "1.4.5",
+    "cookie-session": "2.1.1",
+    "express": "4.17.1",
+    "express-flash": "0.0.2",
+    "express-handlebars": "5.3.3",
+    "express-session": "1.17.2",
+    "mysql": "2.18.1",
+    "mysql2": "3.24.4",
+    "nodemon": "2.0.12",
+    "sequelize": "6.37.8",
+    "session-file-store": "1.5.0"
+  }
+}

@@ -1,0 +1,45 @@
+.form_container { /* estilos dos elementos com a classe "form_container" */
+  max-width: 300px; /* largura máxima */
+  margin: 0 auto; /* espaço externo (fora da borda) */
+  background-color: #fff; /* cor de fundo */
+  border-radius: 15px; /* arredonda os cantos */
+}
+
+.form_container input[type='submit'] { /* estilos de "input[type='submit']" que está dentro de ".form_container" */
+  border-radius: 8px; /* arredonda os cantos */
+  background-color: #25b456; /* cor de fundo */
+  color: #fff; /* cor do texto */
+  border: none; /* borda (espessura, estilo e cor) */
+  min-width: 100px; /* largura mínima */
+  min-height: 2.5rem; /* altura mínima (vh = % da altura da tela) */
+  width: 100%; /* largura */
+  cursor: pointer; /* formato do cursor do mouse */
+  font-size: 1.1em; /* tamanho da fonte */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+}
+
+.form_container input[type='submit']:hover { /* estilo quando o mouse passa por cima */
+  background-color: #1c8a42; /* cor de fundo */
+}
+
+.form_container p { /* estilos de "p" que está dentro de ".form_container" */
+  margin-top: 1em; /* espaço externo em cima */
+}
+
+.form_container p a { /* estilos de "a" que está dentro de ".form_container" */
+  color: #16479d; /* cor do texto */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+}
+
+/* formulário de pets */
+.preview_pet_images { /* estilos dos elementos com a classe "preview_pet_images" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.preview_pet_images img { /* estilos de "img" que está dentro de ".preview_pet_images" */
+  width: 100px; /* largura */
+  height: 100px; /* altura */
+  margin-left: 1em; /* espaço externo à esquerda */
+}

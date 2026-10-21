@@ -1,0 +1,158 @@
+npm -v -> checa a versão do npm
+node -v -> checa versão do Node
+npm init --yes -> inicia npm como default
+
+config pelo terminal:
+https://docs.npmjs.com/cli/v12/commands/npm-config
+npm config set init-author-name ... -> altera nome  no packaje js
+npm config set init-author-email ... -> altera e-mail do autor
+npm config set init-license MIT -> altera o tipo de licensa utilizada no projeto para MIT
+
+meu default: 
+npm config set init-author-name "Anderson Reis"
+npm config set init-author-email "andersonreis98@gmail.com"
+npm config set init-author-url "https://reisonline.com.br"
+npm config set init-license "MIT"
+npm config set init-version "1.0.0"
+npm config set save-exact false
+npm config set audit true
+npm config set fund true
+npm config set registry "https://registry.npmjs.org/"
+npm init --yes carrega com os dados inseridos no config set mais os dados default
+npm get -> ve todos os dados default do npm
+
+npm config delete init-author-name -> apaga nome do autor
+
+instalação de modulo global
+npm install request -g -> instala o modulo request globalmente, mas não fica no package.json
+
+npm remove request -g -> remove o modulo request globalmente
+
+cuidado ao utilizar o -g, pois pode causar conflitos de versão
+
+npm list -g -> lista todos os modulos instalados globalmente
+
+npm list --depth=0 -> lista os modulos instalados no projeto, sem listar os sub-modulos (com -g lista os globais)
+
+como remover arquivo do node modules
+npm prune -> remove todos os arquivos do node modules de pacotes que não estão o package.json
+
+procurar pacotes pela linha de comando
+
+npm search express -> procurar pacotes pela palavra express
+
+npm outdated -> lista os pacotes que estão desatualizados
+pacote com ^ quer dizer que aceita atualizações de minor e patch (ver seção semver abaixo), não é vulnerabilidade
+curent ->  versão atual
+latest -> versão mais recente
+wanted -> versão desejada
+
+npm update -> atualiza os pacotes
+
+npm cache verify -> verifica se o cache está funcionando e o que está em cache
+npm cache clean --force -> apaga o cache
+
+identificando vulterabilidades: 
+
+npm audit -> verifica se há vilnerabilidades
+
+npm audit fix -> corrige as vulnerabilidades
+
+npm audit fix --force -> corrige os erros de audit de forma forçada
+
+npm view react -> mostra informações sobre o react no npm
+
+npm  docs react -> mostra documentação oficial do react no npm
+
+npm home react -> mostra o github do react no npm
+
+npm dedupe -> remover dependências duplicadas do package.json diminuindo o tamanho do pacote
+
+npm install axios --no-save -> instala axios no node modules, mas não adiciona no package.json
+
+npm run -> mostra os scripts do pacote
+npm help scripts -> abre a documentação sobre scripts do npm
+
+------------------------------------------------------------
+instalação de pacotes (atalhos e flags)
+
+npm i express -> atalho de npm install
+npm i -D nodemon -> instala como dependência de desenvolvimento (devDependencies)
+npm i express@4.18.2 -> instala uma versão específica
+npm i express@latest -> instala a versão mais recente
+npm i -E express -> instala a versão exata (sem ^ no package.json)
+npm install -> instala tudo que está no package.json
+npm ci -> instalação limpa usando exatamente o package-lock.json (ideal para CI/deploy)
+npm install --omit=dev -> instala só as dependências de produção
+npm uninstall express -> remove o pacote do node_modules e do package.json (igual npm remove / npm rm)
+npm rebuild -> recompila pacotes nativos (útil após trocar a versão do Node)
+
+------------------------------------------------------------
+versões (semver) no package.json
+
+1.2.3 -> MAJOR.MINOR.PATCH
+^1.2.3 -> aceita atualizações de minor e patch (1.x.x)
+~1.2.3 -> aceita só atualizações de patch (1.2.x)
+1.2.3 -> versão exata
+* ou latest -> qualquer versão
+
+npm version patch -> sobe a versão do projeto 1.0.0 -> 1.0.1
+npm version minor -> sobe a versão do projeto 1.0.0 -> 1.1.0
+npm version major -> sobe a versão do projeto 1.0.0 -> 2.0.0
+
+------------------------------------------------------------
+scripts e execução
+
+npm start -> roda o script "start" (não precisa do run)
+npm test -> roda o script "test" (atalho: npm t)
+npm run dev -> roda um script personalizado chamado "dev"
+npm run build -- --watch -> passa argumentos extras para o script (depois do --)
+npx nodemon index.js -> executa um pacote sem instalar globalmente
+npx create-react-app meu-app -> baixa e executa o pacote na hora
+npm exec -- eslint . -> equivalente ao npx
+
+------------------------------------------------------------
+informações e diagnóstico
+
+npm ls express -> mostra qual versão do express está instalada e quem depende dele
+npm explain express -> explica por que o pacote está instalado (cadeia de dependências)
+npm view express versions -> lista todas as versões publicadas do pacote
+npm view express version -> mostra a última versão publicada
+npm root -g -> mostra a pasta onde ficam os pacotes globais
+npm prefix -g -> mostra o prefixo da instalação global
+npm config list -> mostra as configurações alteradas pelo usuário
+npm config get init-author-name -> mostra o valor de uma configuração específica
+npm config edit -> abre o arquivo .npmrc no editor
+npm doctor -> verifica se o ambiente npm/node está saudável
+npm fund -> lista os pacotes que pedem financiamento/doações
+npm bugs express -> abre a página de issues do pacote
+npm repo express -> abre o repositório do pacote
+
+------------------------------------------------------------
+editando o package.json pelo terminal
+
+npm pkg get name -> mostra o campo name do package.json
+npm pkg set scripts.dev="nodemon index.js" -> cria/altera um campo
+npm pkg delete scripts.test -> remove um campo
+
+------------------------------------------------------------
+pacotes locais e publicação
+
+npm link -> cria um link global do pacote da pasta atual (para testar localmente)
+npm link meu-pacote -> usa o pacote linkado em outro projeto
+npm unlink meu-pacote -> remove o link
+npm pack -> gera um .tgz do pacote (mostra o que seria publicado)
+npm adduser / npm login -> faz login no npm
+npm whoami -> mostra o usuário logado
+npm publish -> publica o pacote no npm
+npm publish --access public -> publica pacote com escopo (@usuario/pacote) como público
+npm unpublish meu-pacote@1.0.0 -> remove uma versão publicada (tem restrições de prazo)
+npm deprecate meu-pacote@1.0.0 "use a 2.0" -> marca versão como obsoleta
+npm logout -> faz logout do npm
+
+------------------------------------------------------------
+ajuda
+
+npm help -> ajuda geral
+npm help install -> ajuda de um comando específico
+npm install -h -> resumo rápido das opções do comando

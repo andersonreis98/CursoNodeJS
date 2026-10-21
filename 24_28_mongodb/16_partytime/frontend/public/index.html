@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- declara que o documento é HTML5 -->
+<!-- elemento raiz da página; "lang" indica o idioma -->
+<html lang="">
+  <!-- cabeçalho: informações da página que não aparecem no corpo -->
+  <head>
+    <!-- codificação de caracteres (UTF-8 aceita acentos) -->
+    <meta charset="utf-8">
+    <!-- pede ao navegador Edge/IE o modo de renderização mais recente -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- deixa a página responsiva em celulares -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- ícone da aba; a tag BASE_URL é trocada pelo endereço base no build do Vue CLI -->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- título que aparece na aba do navegador -->
+    <title>Party Time!</title>
+  </head>
+  <!-- corpo: tudo que aparece na tela -->
+  <body>
+    <!-- mensagem exibida quando o JavaScript está desativado -->
+    <noscript>
+      <!-- texto do aviso (gerado pelo Vue CLI); o título vem das opções do html-webpack-plugin -->
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <!-- div onde o Vue monta a aplicação (app.mount("#app") no main.js) -->
+    <div id="app"></div>
+    <!-- os arquivos gerados no build são inseridos aqui automaticamente -->
+  </body>
+</html>

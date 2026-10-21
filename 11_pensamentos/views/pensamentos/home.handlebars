@@ -1,0 +1,72 @@
+{{!-- bloco com a classe "home-header" (usada para estilizar no CSS) --}}
+<div class="home-header">
+    {{!-- se o usuário fez uma busca, mostra o termo buscado --}}
+    {{#if search}}
+    {{!-- título principal; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+    <h1>Você está buscando por: <span>{{search}}</span></h1>
+        {{!-- se encontrou resultados, mostra a quantidade --}}
+        {{#if PensamentosQty }}
+            {{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+            <p>Foram encontrados <span>{{PensamentosQty}}</span> pensamento(s)</p>
+        {{!-- senão (executa quando a condição/lista for falsa ou vazia) --}}
+        {{else}}
+            {{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+            <p>Nenhum pensamento encontrado para o termo <span>{{search}}</span></p>
+        {{!-- fim do if --}}
+        {{/if}}
+    {{!-- senão (executa quando a condição/lista for falsa ou vazia) --}}
+    {{else}}
+    {{!-- título principal --}}
+    <h1>Conheça alguns dos nossos <span>Pensamentos</span>:</h1>
+    {{!-- fim do if --}}
+    {{/if}}
+    {{!-- formulário que envia os dados para "/" usando o método GET --}}
+    <form action="/" method="GET">
+        {{!-- campo do tipo text; o valor chega no servidor com o nome "search" --}}
+        <input type="text" name="search" placeholder="Está buscando por algo?">
+        {{!-- botão que envia o formulário --}}
+        <input type="submit" class="btn" value="Buscar">
+    </form>
+    {{!-- bloco com a classe "order-container" (usada para estilizar no CSS) --}}
+    <div class="order-container">
+        {{!-- trecho de texto em linha --}}
+        <span>Ordenar por:</span>  
+        {{!-- formulário que envia os dados para "/" usando o método GET --}}
+        <form action="/" method="GET">
+            {{!-- campo escondido que mantém o termo da busca ao trocar a ordenação --}}
+            <input type="hidden" name="search" value="{{this.search}}">
+            {{!-- campo escondido: ordenação pelos mais novos --}}
+            <input type="hidden" name="order" value="new">
+            {{!-- botão que envia o formulário --}}
+            <button type="submit"><i class="bi bi-arrow-up"></i> Mais novos</button>
+        </form>
+        {{!-- formulário que envia os dados para "/" usando o método GET --}}
+        <form action="/" method="GET">
+            {{!-- campo escondido que mantém o termo da busca ao trocar a ordenação --}}
+            <input type="hidden" name="search" value="{{this.search}}">
+            {{!-- campo escondido: ordenação pelos mais antigos --}}
+            <input type="hidden" name="order" value="old">
+            {{!-- botão que envia o formulário --}}
+            <button type="submit"><i class="bi bi-arrow-down"></i> Mais antigos</button>
+        </form>
+        {{!-- link para / --}}
+        <a href="/">Limpar</a>
+    </div>
+</div>
+{{!-- bloco com a classe "Pensamentos-container" (usada para estilizar no CSS) --}}
+<div class="Pensamentos-container">
+    {{!-- percorre a lista "Pensamentos"; dentro do bloco, "this" é o item atual --}}
+    {{#each Pensamentos}}
+        {{!-- agrupa um conteúdo (a citação) com a sua legenda --}}
+        <figure>
+            {{!-- bloco de citação --}}
+            <blockquote>
+                {{!-- texto do pensamento --}}
+                "{{this.title}}"
+            </blockquote>
+            {{!-- legenda da citação; o que está entre { } é substituído pelo valor enviado pelo servidor; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+            <figcaption>por <span>{{this.User.name}}</span></figcaption>
+        </figure>
+    {{!-- fim do loop each --}}
+    {{/each}}
+</div>

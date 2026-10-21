@@ -1,11 +1,20 @@
+{{!-- bloco com o id "book-page" --}}
 <div id="book-page">
+  {{!-- link para /books --}}
   <a href="/books">Voltar</a>
+  {{!-- container que centraliza o conteúdo das páginas --}}
   <div class="container">
+    {{!-- título principal; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
     <h1>{{book.TITLE}}</h1>
+    {{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
     <p>Este livro tem {{book.PAGEQTY}} páginas.</p>
+    {{!-- bloco com a classe "actions" (usada para estilizar no CSS) --}}
     <div class="actions">
+      {{!-- link para /books/edit/{{book.ID}}; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
       <a href="/books/edit/{{book.ID}}">Editar</a>
+      {{!-- formulário que envia os dados para "/books/remove/{{book.ID}}" usando o método POST --}}
       <form action="/books/remove/{{book.ID}}" method="POST">
+        {{!-- botão que envia o formulário --}}
         <input type="submit" value="Remover">
       </form>
     </div>

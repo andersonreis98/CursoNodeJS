@@ -1,14 +1,21 @@
+{{!-- bloco com o id "book-page" --}}
 <div id='book-page'>
+	{{!-- link para /books --}}
 	<a href='/books'>
 		Voltar para a lista de livros
 	</a>
+	{{!-- título principal --}}
 	<h1>
+		{{!-- imprime um valor vindo do servidor --}}
 		{{book.TITLE}}
 	</h1>
+	{{!-- parágrafo de texto --}}
 	<p>
 		Este livro tem {{book.PAGEQTY}} páginas.
 	</p>
+	{{!-- bloco com a classe "actions" (usada para estilizar no CSS) --}}
 	<div class='actions'>
+		{{!-- link para /books/edit/{{book.ID}}; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 		<a href='/books/edit/{{book.ID}}'>
 			Editar
 		</a>

@@ -1,0 +1,9 @@
+.footer { /* estilos dos elementos com a classe "footer" */
+    height: 250px; /* altura */
+    display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+    align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+    justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+    background-color: #eee; /* cor de fundo */
+    color: #444; /* cor do texto */
+    border-top: 1px solid #666; /* borda superior */
+}

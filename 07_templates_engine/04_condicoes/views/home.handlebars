@@ -1,5 +1,10 @@
+{{!-- título principal --}}
 <h1>Olá Handlebars!</h1>
+{{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 <p>O nome do usuario é {{user.name}} {{user.surname}} e ele tem {{user.age}} anos.</p>
+{{!-- mostra o bloco somente se "auth" for verdadeiro --}}
 {{#if auth}}
+    {{!-- parágrafo de texto --}}
     <p>Usuário autenticado, <a href="/dashboard">Clique aqui</a> para acessar o painel</p>
+{{!-- fim do if --}}
 {{/if}}

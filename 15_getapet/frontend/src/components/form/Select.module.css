@@ -1,0 +1,16 @@
+.form_control { /* estilos dos elementos com a classe "form_control" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.form_control label { /* estilos de "label" que está dentro de ".form_control" */
+  margin-bottom: 0.6em; /* espaço externo embaixo */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+}
+
+.form_control select { /* estilos de "select" que está dentro de ".form_control" */
+  padding: 0.7em; /* espaço interno (entre o conteúdo e a borda) */
+  border: 1px solid #777; /* borda (espessura, estilo e cor) */
+  border-radius: 5px; /* arredonda os cantos */
+}

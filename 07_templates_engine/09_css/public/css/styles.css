@@ -1,9 +1,9 @@
-h1{
-    color: red;
+h1{ /* estilos de todas as tags <h1> */
+    color: red; /* cor do texto */
 }
-h2{
-    color: blue;
+h2{ /* estilos de todas as tags <h2> */
+    color: blue; /* cor do texto */
 }
-h3{
-    color: green;
+h3{ /* estilos de todas as tags <h3> */
+    color: green; /* cor do texto */
 }

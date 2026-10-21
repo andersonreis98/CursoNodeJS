@@ -1,62 +1,62 @@
-* {
-	font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+* { /* seletor universal: aplica a todos os elementos */
+	font-family: Arial, Helvetica, sans-serif; /* fonte (com alternativas, caso a primeira não exista) */
+    margin: 0; /* espaço externo (fora da borda) */
 }
-h1 {
-	text-align: center;
+h1 { /* estilos de todas as tags <h1> */
+	text-align: center; /* alinhamento horizontal do texto */
 }
-.form {
-	width: 450px;
-	margin: 0 auto;
+.form { /* estilos dos elementos com a classe "form" */
+	width: 450px; /* largura */
+	margin: 0 auto; /* espaço externo (fora da borda) */
 }
-.form-control {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 0.5em;
+.form-control { /* estilos dos elementos com a classe "form-control" */
+	display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+	flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+	margin-bottom: 0.5em; /* espaço externo embaixo */
 }
-.form-control label {
-	font-weight: bold;
-	margin-bottom: 0.3em;
+.form-control label { /* estilos de "label" que está dentro de ".form-control" */
+	font-weight: bold; /* espessura da fonte (bold = negrito) */
+	margin-bottom: 0.3em; /* espaço externo embaixo */
 }
-.form-control input {
-	padding: 5px;
+.form-control input { /* estilos de "input" que está dentro de ".form-control" */
+	padding: 5px; /* espaço interno (entre o conteúdo e a borda) */
 }
-.books-container div {
-	border-bottom: 1px solid #ccc;
-	padding: 5px;
-	margin: 5px;
+.books-container div { /* estilos de "div" que está dentro de ".books-container" */
+	border-bottom: 1px solid #ccc; /* borda inferior */
+	padding: 5px; /* espaço interno (entre o conteúdo e a borda) */
+	margin: 5px; /* espaço externo (fora da borda) */
 }
-.bold {
-	font-weight: bold;
+.bold { /* estilos dos elementos com a classe "bold" */
+	font-weight: bold; /* espessura da fonte (bold = negrito) */
 }
-#navbar {
-	border-bottom: 1px solid #ccc;
-	padding: 0.5em;
-	margin-bottom: 1em;
+#navbar { /* estilos do elemento com id "navbar" */
+	border-bottom: 1px solid #ccc; /* borda inferior */
+	padding: 0.5em; /* espaço interno (entre o conteúdo e a borda) */
+	margin-bottom: 1em; /* espaço externo embaixo */
 }
-nav ul {
-	list-style: none;
-	display: flex;
-	/* justify-content: center; */
-	gap: 1em;
-    margin: 0;
+nav ul { /* estilos de "ul" que está dentro de "nav" */
+	list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
+	display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+	/* justify-content: center; */ /* propriedade desativada (comentada) */
+	gap: 1em; /* espaço entre os itens do flex/grid */
+    margin: 0; /* espaço externo (fora da borda) */
 }
-nav ul li {
-	margin-left: 1em;
+nav ul li { /* estilos de "li" que está dentro de "nav" */
+	margin-left: 1em; /* espaço externo à esquerda */
 }
 
-/* book */
-#book-page{
-    padding: 2em;
+/* página do livro */
+#book-page{ /* estilos do elemento com id "book-page" */
+    padding: 2em; /* espaço interno (entre o conteúdo e a borda) */
 }
-#book-page .container{
-    text-align: center;
+#book-page .container{ /* estilos de ".container" que está dentro de "#book-page" */
+    text-align: center; /* alinhamento horizontal do texto */
 }
-.actions {
-	display: flex;
-	justify-content: center;
-	gap: 1em;
+.actions { /* estilos dos elementos com a classe "actions" */
+	display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+	justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+	gap: 1em; /* espaço entre os itens do flex/grid */
 }
-.actions a{
-	margin-right: 1em;
+.actions a{ /* estilos de "a" que está dentro de ".actions" */
+	margin-right: 1em; /* espaço externo à direita */
 }

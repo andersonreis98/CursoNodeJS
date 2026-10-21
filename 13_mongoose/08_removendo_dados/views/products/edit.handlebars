@@ -1,0 +1,35 @@
+{{!-- título principal --}}
+<h1>Editar produto</h1>
+{{!-- formulário que envia os dados para "/edit/{{product._id}}" usando o método POST --}}
+<form action="/edit/{{product._id}}" method="POST">
+    {{!-- agrupa o rótulo e o campo do formulário --}}
+    <div class="form-control">
+        {{!-- rótulo do campo "name" --}}
+        <label for="name">Nome do produto:</label>
+        {{!-- campo do tipo text; o valor chega no servidor com o nome "name"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+        <input type="text" name="name" placeholder="Digite o nome do produto" value="{{product.name}}">
+    </div>
+    {{!-- agrupa o rótulo e o campo do formulário --}}
+    <div class="form-control">
+        {{!-- rótulo do campo "price" --}}
+        <label for="price">Preço do produto:</label>
+        {{!-- campo do tipo text; o valor chega no servidor com o nome "price"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+        <input type="text" name="price" placeholder="Digite o preço" value="{{product.price}}">
+    </div>
+    {{!-- agrupa o rótulo e o campo do formulário --}}
+    <div class="form-control">
+        {{!-- rótulo do campo "description" --}}
+        <label for="description">Descrição do produto:</label>
+        {{!-- área de texto com várias linhas; enviada com o nome "description"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+        <textarea name="description" placeholder="Descrição do produto">{{product.description}}</textarea>
+    </div>
+    {{!-- agrupa o rótulo e o campo do formulário --}}
+    <div class="form-control">
+        {{!-- rótulo do campo "image" --}}
+        <label for="image">Imagem:</label>
+        {{!-- campo do tipo text; o valor chega no servidor com o nome "image"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+        <input type="text" name="image" placeholder="Insira a URL da imagem" value="{{product.image}}" />
+    </div>
+    {{!-- botão que envia o formulário --}}
+    <input type="submit" class="btn" value="Editar">
+</form>

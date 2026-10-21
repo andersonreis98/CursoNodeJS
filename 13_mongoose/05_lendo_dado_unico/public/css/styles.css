@@ -1,0 +1,94 @@
+* { /* seletor universal: aplica a todos os elementos */
+  font-family: Helvetica, sans-serif; /* fonte (com alternativas, caso a primeira não exista) */
+  margin: 0; /* espaço externo (fora da borda) */
+  padding: 0; /* espaço interno (entre o conteúdo e a borda) */
+  background-color: #222; /* cor de fundo */
+  color: #fff; /* cor do texto */
+}
+
+/* BARRA DE NAVEGAÇÃO */
+#navbar { /* estilos do elemento com id "navbar" */
+  padding: 1.2em 2.4em; /* espaço interno (entre o conteúdo e a borda) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  border-bottom: 1px solid #fff; /* borda inferior */
+}
+
+#navbar ul { /* estilos de "ul" que está dentro de "#navbar" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
+}
+
+#navbar ul li { /* estilos de "li" que está dentro de "#navbar" */
+  margin-left: 1em; /* espaço externo à esquerda */
+}
+
+.container { /* estilos dos elementos com a classe "container" */
+  padding: 2em; /* espaço interno (entre o conteúdo e a borda) */
+}
+
+.container h1 { /* estilos de "h1" que está dentro de ".container" */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+form { /* estilos de todas as tags <form> */
+  max-width: 300px; /* largura máxima */
+}
+
+.form-control { /* estilos dos elementos com a classe "form-control" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+}
+
+.form-control label { /* estilos de "label" que está dentro de ".form-control" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  margin-bottom: 0.4em; /* espaço externo embaixo */
+}
+
+.form-control input, /* seletor ".form-control input" (continua na linha de baixo: as regras valem para todos) */
+.form-control textarea { /* estilos de "textarea" que está dentro de ".form-control" */
+  border: 1px solid #fff; /* borda (espessura, estilo e cor) */
+  padding: 5px; /* espaço interno (entre o conteúdo e a borda) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.btn { /* estilos dos elementos com a classe "btn" */
+  background-color: #fff; /* cor de fundo */
+  color: #000; /* cor do texto */
+  padding: 5px 10px; /* espaço interno (entre o conteúdo e a borda) */
+  border: none; /* borda (espessura, estilo e cor) */
+  margin-top: 1em; /* espaço externo em cima */
+  cursor: pointer; /* formato do cursor do mouse */
+}
+
+.products { /* estilos dos elementos com a classe "products" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-wrap: wrap; /* permite os itens quebrarem para a linha seguinte */
+}
+
+.product { /* estilos dos elementos com a classe "product" */
+  width: 23%; /* largura */
+  margin: 1%; /* espaço externo (fora da borda) */
+  text-align: center; /* alinhamento horizontal do texto */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.product img { /* estilos de "img" que está dentro de ".product" */
+  max-width: 100%; /* largura máxima */
+  margin-bottom: 0.5em; /* espaço externo embaixo */
+}
+
+.product h3 { /* estilos de "h3" que está dentro de ".product" */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.product-page img { /* estilos de "img" que está dentro de ".product-page" */
+  max-width: 250px; /* largura máxima */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.product-page p { /* estilos de "p" que está dentro de ".product-page" */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}

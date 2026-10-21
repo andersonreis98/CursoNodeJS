@@ -1,0 +1,293 @@
+* { /* seletor universal: aplica a todos os elementos */
+  font-family: Helvetica, sans-serif; /* fonte (com alternativas, caso a primeira não exista) */
+  margin: 0; /* espaço externo (fora da borda) */
+  padding: 0; /* espaço interno (entre o conteúdo e a borda) */
+  background-color: #222; /* cor de fundo */
+  color: #fff; /* cor do texto */
+}
+
+/* BARRA DE NAVEGAÇÃO */
+#logo img { /* estilos de "img" que está dentro de "#logo" */
+  height: 40px; /* altura */
+}
+
+#navbar { /* estilos do elemento com id "navbar" */
+  padding: 1.2em 2.4em; /* espaço interno (entre o conteúdo e a borda) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  background-color: #222; /* cor de fundo */
+  color: #fff; /* cor do texto */
+  border-bottom: 1px solid #f6982d; /* borda inferior */
+}
+
+#navbar ul { /* estilos de "ul" que está dentro de "#navbar" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
+}
+
+#navbar ul li { /* estilos de "li" que está dentro de "#navbar" */
+  margin-left: 1em; /* espaço externo à esquerda */
+}
+
+#navbar ul li a { /* estilos de "a" que está dentro de "#navbar" */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+  color: #fff; /* cor do texto */
+  transition: 0.5s; /* animação suave ao mudar propriedades */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+}
+
+#navbar ul li a:hover { /* estilo quando o mouse passa por cima */
+  color: #f6982d; /* cor do texto */
+}
+
+/* CONTAINER */
+.message { /* estilos dos elementos com a classe "message" */
+  padding: 1em; /* espaço interno (entre o conteúdo e a borda) */
+  color: #004085; /* cor do texto */
+  background-color: #cce5ff; /* cor de fundo */
+  border: 1px soli d#b8daff; /* borda (espessura, estilo e cor) */
+  border-radius: 5px; /* arredonda os cantos */
+  text-align: center; /* alinhamento horizontal do texto */
+  margin: 0 auto 2em; /* espaço externo (fora da borda) */
+  max-width: 60%; /* largura máxima */
+}
+
+.container { /* estilos dos elementos com a classe "container" */
+  min-height: 60vh; /* altura mínima (vh = % da altura da tela) */
+  padding: 2em; /* espaço interno (entre o conteúdo e a borda) */
+}
+
+/* LOGIN E CADASTRO */
+.auth-container { /* estilos dos elementos com a classe "auth-container" */
+  max-width: 450px; /* largura máxima */
+  margin: 0 auto; /* espaço externo (fora da borda) */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+}
+
+.auth-container h2 { /* estilos de "h2" que está dentro de ".auth-container" */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  color: #fff; /* cor do texto */
+  border-left: 4px solid #f6982d; /* borda esquerda */
+  padding: 0.3em; /* espaço interno (entre o conteúdo e a borda) */
+  width: 100px; /* largura */
+}
+
+.auth-container a { /* estilos de "a" que está dentro de ".auth-container" */
+  color: #f6982d; /* cor do texto */
+}
+
+.form-control { /* estilos dos elementos com a classe "form-control" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.form-control label { /* estilos de "label" que está dentro de ".form-control" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  margin-bottom: 0.5em; /* espaço externo embaixo */
+}
+
+.form-control input, /* seletor ".form-control input" (continua na linha de baixo: as regras valem para todos) */
+.form-control textarea { /* estilos de "textarea" que está dentro de ".form-control" */
+  padding: 7px; /* espaço interno (entre o conteúdo e a borda) */
+  border-radius: 3px; /* arredonda os cantos */
+  border: 1px solid #f6982d; /* borda (espessura, estilo e cor) */
+}
+
+form input[type='submit'], /* seletor "form input[type='submit']" (continua na linha de baixo: as regras valem para todos) */
+.btn { /* estilos dos elementos com a classe "btn" */
+  background-color: transparent; /* cor de fundo */
+  color: #f6982d; /* cor do texto */
+  border: 2px solid #f6982d; /* borda (espessura, estilo e cor) */
+  padding: 0.5em 1.3em; /* espaço interno (entre o conteúdo e a borda) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  font-size: 1em; /* tamanho da fonte */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  border-radius: 5px; /* arredonda os cantos */
+  cursor: pointer; /* formato do cursor do mouse */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+  transition: 0.5s; /* animação suave ao mudar propriedades */
+}
+
+form input[type='submit']:hover, /* seletor "form input[type='submit']:hover" (continua na linha de baixo: as regras valem para todos) */
+.btn:hover { /* estilo quando o mouse passa por cima */
+  background-color: #f6982d; /* cor de fundo */
+  color: #fff; /* cor do texto */
+}
+
+/* PAINEL (DASHBOARD) */
+.title-container { /* estilos dos elementos com a classe "title-container" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
+  margin-bottom: 1.5em; /* espaço externo embaixo */
+}
+
+.title-container h2 { /* estilos de "h2" que está dentro de ".title-container" */
+  border-left: 4px solid #f6982d; /* borda esquerda */
+  padding: 10px; /* espaço interno (entre o conteúdo e a borda) */
+}
+
+.dashboard h3 { /* estilos de "h3" que está dentro de ".dashboard" */
+  margin-bottom: 1.5em; /* espaço externo embaixo */
+}
+
+.dashboard ul { /* estilos de "ul" que está dentro de ".dashboard" */
+  list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
+}
+
+.dashboard li { /* estilos de "li" que está dentro de ".dashboard" */
+  padding: 12px; /* espaço interno (entre o conteúdo e a borda) */
+  border-bottom: 1px solid #f6982d; /* borda inferior */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
+}
+
+.dashboard .label { /* estilos de ".label" que está dentro de ".dashboard" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  color: #f6982d; /* cor do texto */
+  margin-right: 2em; /* espaço externo à direita */
+}
+
+.dashboard .actions { /* estilos de ".actions" que está dentro de ".dashboard" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+}
+
+.dashboard .actions .btn { /* estilos de ".btn" que está dentro de ".dashboard" */
+  color: #fff; /* cor do texto */
+  border-color: #fff; /* cor da borda */
+  margin: 0 0.5em; /* espaço externo (fora da borda) */
+}
+
+/* FORMULÁRIO DE CRIAR / EDITAR */
+.Pensamento-form-container a { /* estilos de "a" que está dentro de ".Pensamento-form-container" */
+  color: #f6982d; /* cor do texto */
+}
+
+.Pensamento-form-container a:hover { /* estilo quando o mouse passa por cima */
+  color: #fff; /* cor do texto */
+}
+
+.Pensamento-form-container h1 { /* estilos de "h1" que está dentro de ".Pensamento-form-container" */
+  border-left: 4px solid #f6982d; /* borda esquerda */
+  padding: 10px; /* espaço interno (entre o conteúdo e a borda) */
+  margin-top: 1em; /* espaço externo em cima */
+}
+
+.Pensamento-form-container form { /* estilos de "form" que está dentro de ".Pensamento-form-container" */
+  max-width: 30%; /* largura máxima */
+  margin-top: 1.5em; /* espaço externo em cima */
+}
+
+/* PÁGINA INICIAL */
+.home-header { /* estilos dos elementos com a classe "home-header" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+  max-width: 60%; /* largura máxima */
+  margin: 0 auto; /* espaço externo (fora da borda) */
+  text-align: center; /* alinhamento horizontal do texto */
+}
+
+.home-header h1 { /* estilos de "h1" que está dentro de ".home-header" */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.home-header span { /* estilos de "span" que está dentro de ".home-header" */
+  color: #f6982d; /* cor do texto */
+}
+
+.home-header p { /* estilos de "p" que está dentro de ".home-header" */
+  margin-bottom: 1.2em; /* espaço externo embaixo */
+}
+
+.home-header form { /* estilos de "form" que está dentro de ".home-header" */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.home-header input { /* estilos de "input" que está dentro de ".home-header" */
+  border: none; /* borda (espessura, estilo e cor) */
+  border-bottom: 1px solid #fff; /* borda inferior */
+  padding: 0.5em; /* espaço interno (entre o conteúdo e a borda) */
+  margin-right: 1em; /* espaço externo à direita */
+}
+
+.home-header input[type='text'] { /* estilos de "input[type='text']" que está dentro de ".home-header" */
+  width: 60%; /* largura */
+}
+
+.home-header input::placeholder { /* texto de exemplo dentro do campo */
+  color: #fff; /* cor do texto */
+}
+
+.order-container { /* estilos dos elementos com a classe "order-container" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  max-width: 80%; /* largura máxima */
+  margin: 0 auto 1em; /* espaço externo (fora da borda) */
+}
+
+.order-container span { /* estilos de "span" que está dentro de ".order-container" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  color: #fff; /* cor do texto */
+}
+
+.order-container form { /* estilos de "form" que está dentro de ".order-container" */
+  margin: 0; /* espaço externo (fora da borda) */
+}
+
+.order-container button { /* estilos de "button" que está dentro de ".order-container" */
+  margin-bottom: 0; /* espaço externo embaixo */
+  border: none; /* borda (espessura, estilo e cor) */
+  cursor: pointer; /* formato do cursor do mouse */
+}
+
+.order-container button:hover, /* seletor ".order-container button:hover" (continua na linha de baixo: as regras valem para todos) */
+.order-container a:hover { /* estilo quando o mouse passa por cima */
+  color: #f6982d; /* cor do texto */
+}
+
+.order-container span, /* seletor ".order-container span" (continua na linha de baixo: as regras valem para todos) */
+.order-container button, /* seletor ".order-container button" (continua na linha de baixo: as regras valem para todos) */
+.order-container a { /* estilos de "a" que está dentro de ".order-container" */
+  margin: 0 10px; /* espaço externo (fora da borda) */
+}
+
+.order-container i { /* estilos de "i" que está dentro de ".order-container" */
+  color: #f6982d; /* cor do texto */
+}
+
+.Pensamentos-container figure { /* estilos de "figure" que está dentro de ".Pensamentos-container" */
+  border-bottom: 1px solid #333; /* borda inferior */
+  padding: 0.5em; /* espaço interno (entre o conteúdo e a borda) */
+  max-width: 50%; /* largura máxima */
+  margin: 0 auto 1em; /* espaço externo (fora da borda) */
+}
+
+.Pensamentos-container blockquote { /* estilos de "blockquote" que está dentro de ".Pensamentos-container" */
+  font-style: italic; /* estilo da fonte (ex.: itálico) */
+  font-size: 2em; /* tamanho da fonte */
+  margin-bottom: 0.4em; /* espaço externo embaixo */
+}
+
+.Pensamentos-container span { /* estilos de "span" que está dentro de ".Pensamentos-container" */
+  color: #f6982d; /* cor do texto */
+}
+
+/* RODAPÉ */
+footer { /* estilos de todas as tags <footer> */
+  height: 150px; /* altura */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+  border-top: 1px solid #f6982d; /* borda superior */
+  background-color: #222; /* cor de fundo */
+}
+
+footer span { /* estilos de "span" que está dentro de "footer" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  color: #f6982d; /* cor do texto */
+}

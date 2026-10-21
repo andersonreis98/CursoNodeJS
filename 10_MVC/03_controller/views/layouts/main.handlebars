@@ -1,31 +1,47 @@
+{{!-- elemento raiz da página; "lang" indica o idioma --}}
 <html lang='en'>
+	{{!-- cabeçalho: informações da página que não aparecem no corpo --}}
 	<head>
+		{{!-- codificação de caracteres (UTF-8 aceita acentos) --}}
 		<meta charset='UTF-8' />
+		{{!-- deixa a página responsiva em celulares --}}
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		{{!-- título que aparece na aba do navegador --}}
 		<title>
 			MVC model-view-controller
 		</title>
+		{{!-- carrega o arquivo CSS (servido pela pasta pública) --}}
 		<link rel='stylesheet' href='/css/style.css' />
 	</head>
+	{{!-- corpo: tudo que aparece na tela --}}
 	<body>
+		{{!-- barra de navegação --}}
 		<nav id='navbar'>
+			{{!-- subtítulo --}}
 			<h2>
 				Node Todo
 			</h2>
+			{{!-- lista não ordenada --}}
 			<ul>
+				{{!-- item da lista --}}
 				<li>
+					{{!-- link para /tasks --}}
 					<a href='/tasks'>
 						Ver todas
 					</a>
 				</li>
+				{{!-- item da lista --}}
 				<li>
+					{{!-- link para /tasks/add --}}
 					<a href='/tasks/add'>
 						Criar
 					</a>
 				</li>
 			</ul>
 		</nav>
+		{{!-- container que centraliza o conteúdo das páginas --}}
 		<div class='container'>
+			{{!-- aqui o Handlebars injeta o conteúdo de cada view (três chaves = HTML sem escapar) --}}
 			{{{body}}}
 		</div>
 	</body>

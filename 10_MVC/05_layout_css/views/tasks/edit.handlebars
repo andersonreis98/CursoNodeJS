@@ -1,13 +1,23 @@
+{{!-- título principal; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 <h1>Editando a task: {{task.title}}</h1>
+{{!-- formulário que envia os dados para "/tasks/edit" usando o método POST --}}
 <form action="/tasks/edit" method="POST">
+  {{!-- campo escondido: envia "id" junto com o formulário sem aparecer na tela; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
   <input type="hidden" name="id" value={{task.id}}>
+  {{!-- agrupa o rótulo e o campo do formulário --}}
   <div class="form-control">
+    {{!-- rótulo do campo "title" --}}
     <label for="title">Título:</label>
+    {{!-- campo do tipo text; o valor chega no servidor com o nome "title"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
     <input type="text" name="title" placeholder="O que você vai fazer?" value="{{task.title}}">
   </div>
+  {{!-- agrupa o rótulo e o campo do formulário --}}
   <div class="form-control">
+    {{!-- rótulo do campo "description" --}}
     <label for="description">Descrição:</label>
+    {{!-- área de texto com várias linhas; enviada com o nome "description"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
     <textarea type="text" name="description" placeholder="O que você vai fazer?">{{task.description}}</textarea>
   </div>
+  {{!-- botão que envia o formulário --}}
   <input type="submit" value="Editar">
 </form>

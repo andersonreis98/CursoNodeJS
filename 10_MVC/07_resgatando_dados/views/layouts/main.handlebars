@@ -1,41 +1,59 @@
+{{!-- elemento raiz da página; "lang" indica o idioma --}}
 <html lang='en'>
+	{{!-- cabeçalho: informações da página que não aparecem no corpo --}}
 	<head>
+		{{!-- codificação de caracteres (UTF-8 aceita acentos) --}}
 		<meta charset='UTF-8' />
+		{{!-- deixa a página responsiva em celulares --}}
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		{{!-- título que aparece na aba do navegador --}}
 		<title>
 			MVC model-view-controller
 		</title>
+		{{!-- carrega o arquivo CSS (servido pela pasta pública) --}}
 		<link rel='stylesheet' href='/css/styles.css' />
+		{{!-- carrega um arquivo externo (atributos nas linhas abaixo) --}}
 		<link
 			href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css'
 			rel='stylesheet'
 			integrity='sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB'
 			crossorigin='anonymous'
 		/>
+		{{!-- carrega um arquivo externo (atributos nas linhas abaixo) --}}
 		<link
 			rel='stylesheet'
 			href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css'
 		/>
 	</head>
+	{{!-- corpo: tudo que aparece na tela --}}
 	<body>
+		{{!-- barra de navegação --}}
 		<nav id='navbar'>
+			{{!-- subtítulo --}}
 			<h2>
 				Node Todo
 			</h2>
+			{{!-- lista não ordenada --}}
 			<ul>
+				{{!-- item da lista --}}
 				<li>
+					{{!-- link para /tasks --}}
 					<a href='/tasks'>
 						Ver todas
 					</a>
 				</li>
+				{{!-- item da lista --}}
 				<li>
+					{{!-- link para /tasks/add --}}
 					<a href='/tasks/add'>
 						Criar
 					</a>
 				</li>
 			</ul>
 		</nav>
+		{{!-- container que centraliza o conteúdo das páginas --}}
 		<div class='container'>
+			{{!-- aqui o Handlebars injeta o conteúdo de cada view (três chaves = HTML sem escapar) --}}
 			{{{body}}}
 		</div>
 	</body>

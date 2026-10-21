@@ -1,0 +1,65 @@
+.pet_home_header { /* estilos dos elementos com a classe "pet_home_header" */
+  margin-bottom: 2em; /* espaço externo embaixo */
+}
+
+.pet_home_header h1 { /* estilos de "h1" que está dentro de ".pet_home_header" */
+  margin-bottom: 0.3em; /* espaço externo embaixo */
+}
+
+.pet_container { /* estilos dos elementos com a classe "pet_container" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: flex-start; /* alinhamento dos itens no eixo principal do flex */
+  flex-wrap: wrap; /* permite os itens quebrarem para a linha seguinte */
+}
+
+.pet_card { /* estilos dos elementos com a classe "pet_card" */
+  width: 22%; /* largura */
+  margin: 1.5%; /* espaço externo (fora da borda) */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+  text-align: center; /* alinhamento horizontal do texto */
+}
+
+.pet_card_image { /* estilos dos elementos com a classe "pet_card_image" */
+  background-size: cover; /* tamanho da imagem de fundo */
+  background-position: center; /* posição da imagem de fundo */
+  height: 225px; /* altura */
+  width: 100%; /* largura */
+  margin-bottom: 1.2em; /* espaço externo embaixo */
+}
+
+.pet_card h3 { /* estilos de "h3" que está dentro de ".pet_card" */
+  color: #16479d; /* cor do texto */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  font-size: 1.6em; /* tamanho da fonte */
+  padding: 8px; /* espaço interno (entre o conteúdo e a borda) */
+}
+
+.pet_card p { /* estilos de "p" que está dentro de ".pet_card" */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.pet_card a { /* estilos de "a" que está dentro de ".pet_card" */
+  border-radius: 8px; /* arredonda os cantos */
+  color: #16479d; /* cor do texto */
+  background-color: #ffd400; /* cor de fundo */
+  border: none; /* borda (espessura, estilo e cor) */
+  min-width: 100px; /* largura mínima */
+  padding: 15px; /* espaço interno (entre o conteúdo e a borda) */
+  width: 100%; /* largura */
+  cursor: pointer; /* formato do cursor do mouse */
+  font-size: 1.1em; /* tamanho da fonte */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+}
+
+.pet_card a:hover { /* estilo quando o mouse passa por cima */
+  background-color: #e7c30d; /* cor de fundo */
+  color: #fff; /* cor do texto */
+}
+
+.adopted_text { /* estilos dos elementos com a classe "adopted_text" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  color: #25b456; /* cor do texto */
+  padding: 15px; /* espaço interno (entre o conteúdo e a borda) */
+}

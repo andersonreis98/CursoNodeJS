@@ -1,6 +1,12 @@
+{{!-- muda o contexto para "post": dentro do bloco acessamos as propriedades direto --}}
 {{#with post}}
+	{{!-- título principal; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 	<h1>{{title}}</h1>
+	{{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 	<p>{{body}}</p>
+	{{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 	<p>Categoria: {{category}}</p>
+	{{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 	<p>Comentários: {{comments}}</p>
+{{!-- fim do with --}}
 {{/with}}

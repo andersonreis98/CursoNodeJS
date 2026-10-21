@@ -1,0 +1,46 @@
+html, body { /* aplica as mesmas regras a vários seletores */
+  height: 100%; /* altura */
+}
+
+#main-container { /* estilos do elemento com id "main-container" */
+  padding: 30px 0; /* espaço interno (entre o conteúdo e a borda) */
+  max-width: 500px; /* largura máxima */
+  min-height: 375px; /* altura mínima (vh = % da altura da tela) */
+}
+
+#main-container .actions-column { /* estilos de ".actions-column" que está dentro de "#main-container" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+}
+
+.title-column { /* estilos dos elementos com a classe "title-column" */
+  width: 100%; /* largura */
+}
+
+.title-column a { /* estilos de "a" que está dentro de ".title-column" */
+  color: #212529; /* cor do texto */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+}
+
+.title-column a:hover { /* estilo quando o mouse passa por cima */
+  text-decoration: underline; /* decoração do texto (none remove o sublinhado dos links) */
+}
+
+.btn { /* estilos dos elementos com a classe "btn" */
+  margin-right: 12px; /* espaço externo à direita */
+}
+
+footer { /* estilos de todas as tags <footer> */
+  height: 200px; /* altura */
+  width: 100%; /* largura */
+  color: #FFF; /* cor do texto */
+  text-align: center; /* alinhamento horizontal do texto */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+}
+
+@media(max-width: 425px) { /* regras aplicadas só quando a condição de tela for verdadeira (responsividade) */
+  #main-container { /* estilos do elemento com id "main-container" */
+    padding: 30px; /* espaço interno (entre o conteúdo e a borda) */
+  }
+}

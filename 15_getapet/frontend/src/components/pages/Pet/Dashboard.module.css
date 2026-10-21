@@ -1,0 +1,92 @@
+.petslist_header { /* estilos dos elementos com a classe "petslist_header" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  margin-bottom: 2em; /* espaço externo embaixo */
+}
+
+.petslist_header h1 { /* estilos de "h1" que está dentro de ".petslist_header" */
+  margin: 0; /* espaço externo (fora da borda) */
+}
+
+.petslist_header a { /* estilos de "a" que está dentro de ".petslist_header" */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+  background-color: #16479d; /* cor de fundo */
+  color: #fff; /* cor do texto */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  cursor: pointer; /* formato do cursor do mouse */
+  transition: 0.5s; /* animação suave ao mudar propriedades */
+  padding: 0.5em 0.8em; /* espaço interno (entre o conteúdo e a borda) */
+  border-radius: 5px; /* arredonda os cantos */
+  border: 2px solid #16479d; /* borda (espessura, estilo e cor) */
+}
+
+.petslist_header a:hover { /* estilo quando o mouse passa por cima */
+  background-color: transparent; /* cor de fundo */
+  color: #16479d; /* cor do texto */
+}
+
+.petslist_container { /* estilos dos elementos com a classe "petslist_container" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+}
+
+.petlist_row { /* estilos dos elementos com a classe "petlist_row" */
+  border-bottom: 1px solid #16479d; /* borda inferior */
+  padding: 1em; /* espaço interno (entre o conteúdo e a borda) */
+  margin: 1em; /* espaço externo (fora da borda) */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  width: 100%; /* largura */
+}
+
+.petlist_row img { /* estilos de "img" que está dentro de ".petlist_row" */
+  margin-right: 1em; /* espaço externo à direita */
+}
+
+.petlist_row span { /* estilos de "span" que está dentro de ".petlist_row" */
+  min-width: 100px; /* largura mínima */
+}
+
+.actions { /* estilos dos elementos com a classe "actions" */
+  margin-left: auto; /* espaço externo à esquerda */
+}
+
+.actions a, /* seletor ".actions a" (continua na linha de baixo: as regras valem para todos) */
+.actions button { /* estilos de "button" que está dentro de ".actions" */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+  color: #16479d; /* cor do texto */
+  border: 2px solid #16479d; /* borda (espessura, estilo e cor) */
+  border-radius: 5px; /* arredonda os cantos */
+  padding: 7px 12px; /* espaço interno (entre o conteúdo e a borda) */
+  background-color: #fff; /* cor de fundo */
+  margin-left: 1em; /* espaço externo à esquerda */
+  cursor: pointer; /* formato do cursor do mouse */
+  transition: 0.3s; /* animação suave ao mudar propriedades */
+  font-size: 12px; /* tamanho da fonte */
+}
+
+.actions a:hover, /* seletor ".actions a:hover" (continua na linha de baixo: as regras valem para todos) */
+.actions button:hover { /* estilo quando o mouse passa por cima */
+  background-color: #16479d; /* cor de fundo */
+  color: #fff; /* cor do texto */
+}
+
+.actions .conclude_btn { /* estilos de ".conclude_btn" que está dentro de ".actions" */
+  color: #25b456; /* cor do texto */
+  border-color: #25b456; /* cor da borda */
+}
+
+.actions .conclude_btn:hover { /* estilo quando o mouse passa por cima */
+  color: #fff; /* cor do texto */
+  background-color: #25b456; /* cor de fundo */
+}
+
+/* minhas adoções */
+.contacts { /* estilos dos elementos com a classe "contacts" */
+  margin-left: 2em; /* espaço externo à esquerda */
+}
+
+.contacts p { /* estilos de "p" que está dentro de ".contacts" */
+  margin-bottom: 0.5em; /* espaço externo embaixo */
+}

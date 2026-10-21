@@ -1,26 +1,43 @@
+{{!-- título principal --}}
 <h1>
 	Editando o nome do usuario {{user.name}}
 </h1>
+{{!-- formulário que envia os dados para "/users/update/{{user.id}}" usando o método POST --}}
 <form action='/users/update/{{user.id}}' method='POST' class='form'>
+{{!-- campo escondido: envia "id" junto com o formulário sem aparecer na tela; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 <input type='hidden' name='id' value='{{user.id}}' />
+	{{!-- agrupa o rótulo e o campo do formulário --}}
 	<div class='form-control'>
+		{{!-- rótulo do campo "name" --}}
 		<label for='name'>
 			Nome
 		</label>
+		{{!-- campo do tipo text; o valor chega no servidor com o nome "name"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 		<input type='text' name='name' id='name' class='form-control' value='{{user.name}}' />
 	</div>
+	{{!-- agrupa o rótulo e o campo do formulário --}}
 	<div class='form-control'>
+		{{!-- rótulo do campo "occupation" --}}
 		<label for='occupation'>
 			Profissão
 		</label>
+		{{!-- campo do tipo text; o valor chega no servidor com o nome "occupation"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 		<input type='text' name='occupation' id='occupation' placeholder='Digite a profissão' value='{{user.occupation}}' />
+{{!-- bloco que agrupa elementos --}}
 <div class="form-control form-checkbox">
+    {{!-- mostra o bloco somente se "user.newsletter" for verdadeiro --}}
     {{#if user.newsletter}}
+      {{!-- caixa de seleção (marcado/desmarcado) --}}
       <input type="checkbox" name="newsletter" checked>
+    {{!-- senão (executa quando a condição/lista for falsa ou vazia) --}}
     {{else}}
+      {{!-- caixa de seleção (marcado/desmarcado) --}}
       <input type="checkbox" name="newsletter">
+    {{!-- fim do if --}}
     {{/if}}    
+    {{!-- rótulo do campo "newsletter" --}}
     <label for="newsletter">Enviar promoções?</label>
   </div>
+    {{!-- botão que envia o formulário --}}
     <input type="submit" value="Editar">
 </form>

@@ -1,0 +1,23 @@
+{{!-- link para / --}}
+<a href="/">Voltar</a>
+{{!-- subtítulo --}}
+<h2>Adicione uma nota:</h2>
+{{!-- formulário que envia os dados para "/notes" usando o método POST --}}
+<form method="POST" action="/notes">
+  {{!-- agrupa rótulo e campo; mb-3 é uma classe do Bootstrap que dá margem embaixo --}}
+  <div class="mb-3">
+    {{!-- rótulo do campo "title" --}}
+    <label for="title" class="form-label">Título:</label>
+    {{!-- campo de entrada; o valor chega no servidor com o nome "title" --}}
+    <input type="text" class="form-control" id="title" name="title">
+  </div>
+  {{!-- agrupa rótulo e campo; mb-3 é uma classe do Bootstrap que dá margem embaixo --}}
+  <div class="mb-3">
+    {{!-- rótulo do campo "description" --}}
+    <label for="description" class="form-label">Descrição:</label>
+    {{!-- área de texto com várias linhas; enviada com o nome "description" --}}
+    <textarea type="text" class="form-control" id="description" name="description"></textarea>
+  </div>
+  {{!-- botão que envia o formulário --}}
+  <button type="submit" class="btn btn-primary">Criar nota</button>
+</form>

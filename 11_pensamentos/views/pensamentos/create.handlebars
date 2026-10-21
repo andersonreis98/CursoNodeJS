@@ -1,0 +1,19 @@
+{{!-- bloco com a classe "Pensamento-form-container" (usada para estilizar no CSS) --}}
+<div class="Pensamento-form-container">
+  {{!-- link para /Pensamentos/dashboard --}}
+  <a href="/Pensamentos/dashboard">Voltar</a>
+    {{!-- título principal --}}
+    <h1>Criando um Pensamento:</h1>
+    {{!-- formulário que envia os dados para "/Pensamentos/add" usando o método POST --}}
+    <form action="/Pensamentos/add" method="POST">
+        {{!-- agrupa o rótulo e o campo do formulário --}}
+        <div class="form-control">
+            {{!-- rótulo do campo "title" --}}
+            <label for="title">Título:</label>
+            {{!-- campo do tipo text; o valor chega no servidor com o nome "title" --}}
+            <input type="text" name="title" placeholder="Digite o título">
+        </div>
+        {{!-- botão que envia o formulário --}}
+        <input type="submit" value="Criar Pensamento">
+    </form>
+</div>

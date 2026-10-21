@@ -1,4 +1,8 @@
+{{!-- título principal --}}
 <h1>Vaja nossos Posts</h1>
+{{!-- percorre a lista "posts"; dentro do bloco, "this" é o item atual --}}
 {{#each posts}}
+	{{!-- inclui o partial "post" (pedaço de template reutilizável) --}}
 	{{> post}}
+{{!-- fim do loop each --}}
 {{/each}}

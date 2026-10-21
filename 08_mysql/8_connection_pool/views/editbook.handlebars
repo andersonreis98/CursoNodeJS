@@ -1,13 +1,23 @@
+{{!-- título principal --}}
 <h1>Edite o seu livro:</h1>
+{{!-- formulário que envia os dados para "/books/updatebook" usando o método POST --}}
 <form class="form" action="/books/updatebook" method="POST">
+  {{!-- campo escondido: envia "id" junto com o formulário sem aparecer na tela; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
   <input type="hidden" name="id" value="{{book.ID}}">
+  {{!-- agrupa o rótulo e o campo do formulário --}}
   <div class="form-control">
+    {{!-- rótulo do campo "title" --}}
     <label for="title">Título:</label>
+    {{!-- campo do tipo text; o valor chega no servidor com o nome "title"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
     <input type="text" name="title" placeholder="Título do livro" value="{{book.TITLE}}">
   </div>
+  {{!-- agrupa o rótulo e o campo do formulário --}}
   <div class="form-control">
+    {{!-- rótulo do campo "pageqty" --}}
     <label for="pageqty">Número de páginas:</label>
+    {{!-- campo do tipo number; o valor chega no servidor com o nome "pageqty"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
     <input type="number" name="pageqty" placeholder="Quantas páginas o livro tem?" value="{{book.PAGEQTY}}">
   </div>
+  {{!-- botão que envia o formulário --}}
   <input type="submit" value="Editar">
 </form>

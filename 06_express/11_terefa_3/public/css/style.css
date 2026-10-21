@@ -1,20 +1,20 @@
-body {
-	background-color: orange;
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 20px;
-	color: white;
-	text-align: center;
+body { /* estilos de todas as tags <body> */
+	background-color: orange; /* cor de fundo */
+	font-family: Arial, sans-serif; /* fonte (com alternativas, caso a primeira não exista) */
+	margin: 0; /* espaço externo (fora da borda) */
+	padding: 20px; /* espaço interno (entre o conteúdo e a borda) */
+	color: white; /* cor do texto */
+	text-align: center; /* alinhamento horizontal do texto */
 }
-a{
-	color: white;
-	text-decoration: none;
-	border: 2px solid white;
-	padding: 10px 20px;
-	font-weight: bold;
-	border-radius: 10px;
+a{ /* estilos de todas as tags <a> */
+	color: white; /* cor do texto */
+	text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+	border: 2px solid white; /* borda (espessura, estilo e cor) */
+	padding: 10px 20px; /* espaço interno (entre o conteúdo e a borda) */
+	font-weight: bold; /* espessura da fonte (bold = negrito) */
+	border-radius: 10px; /* arredonda os cantos */
 }
-a:hover{
-	background-color: white;
-	color: orange;
+a:hover{ /* estilo quando o mouse passa por cima */
+	background-color: white; /* cor de fundo */
+	color: orange; /* cor do texto */
 }

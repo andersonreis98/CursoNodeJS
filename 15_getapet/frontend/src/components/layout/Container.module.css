@@ -1,0 +1,6 @@
+.container { /* estilos dos elementos com a classe "container" */
+  min-height: 60vh; /* altura mínima (vh = % da altura da tela) */
+  padding: 1em 2em 3em; /* espaço interno (entre o conteúdo e a borda) */
+  max-width: 1200px; /* largura máxima */
+  margin: 0 auto; /* espaço externo (fora da borda) */
+}

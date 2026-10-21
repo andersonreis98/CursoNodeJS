@@ -1,0 +1,42 @@
+{{!-- bloco com a classe "dashboard" (usada para estilizar no CSS) --}}
+<div class="dashboard">
+    {{!-- bloco com a classe "title-container" (usada para estilizar no CSS) --}}
+    <div class="title-container">
+        {{!-- subtítulo --}}
+        <h2>Dashboard</h2>
+        {{!-- link para /Pensamentos/add --}}
+        <a href="/Pensamentos/add" class="btn">Criar Pensamento</a>
+    </div>
+    {{!-- título de terceiro nível --}}
+    <h3>Seus pensamentos:</h3>
+    {{!-- lista não ordenada --}}
+    <ul>
+        {{!-- percorre a lista "Pensamentos"; dentro do bloco, "this" é o item atual --}}
+        {{#each Pensamentos}}
+            {{!-- item da lista --}}
+            <li>
+                {{!-- trecho de texto em linha; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+                <span class="label">{{this.title}}</span>
+                {{!-- trecho de texto em linha --}}
+                <span class="actions">
+                    {{!-- link para /Pensamentos/edit/{{this.id}}; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+                    <a href="/Pensamentos/edit/{{this.id}}" class="btn">Editar</a>
+                    {{!-- formulário que envia os dados para "/Pensamentos/remove" usando o método POST --}}
+                    <form action="/Pensamentos/remove" method="POST">
+                        {{!-- campo escondido: envia "id" junto com o formulário sem aparecer na tela; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        {{!-- botão que envia o formulário --}}
+                        <input type="submit" value="Excluir" class="btn">
+                    </form>
+                </span>
+            </li>
+        {{!-- fim do loop each --}}
+        {{/each}}
+    </ul>
+    {{!-- mostra o aviso somente se o usuário não tiver pensamentos --}}
+    {{#if emptyPensamentos}}
+        {{!-- parágrafo de texto --}}
+        <p>Ainda não há nenhum pensamento cadastrado, crie o seu <a href="/Pensamentos/add">clicando aqui</a></p>
+    {{!-- fim do if --}}
+    {{/if}}
+</div>

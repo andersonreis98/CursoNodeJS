@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{{!-- declara que o documento é HTML5 --}}
+{{!-- elemento raiz da página; "lang" indica o idioma --}}
+<html lang="en">
+  {{!-- cabeçalho: informações da página que não aparecem no corpo --}}
+  <head>
+    {{!-- codificação de caracteres (UTF-8 aceita acentos) --}}
+    <meta charset="UTF-8" />
+    {{!-- pede ao navegador Edge/IE o modo de renderização mais recente --}}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{!-- deixa a página responsiva em celulares --}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{!-- título que aparece na aba do navegador --}}
+    <title>Pensamentos</title>
+    {{!-- ícone da aba do navegador (favicon) --}}
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    {{!-- carrega o arquivo CSS (servido pela pasta pública) --}}
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- ÍCONES DO BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  </head>
+  {{!-- corpo: tudo que aparece na tela --}}
+  <body>
+    {{!-- barra de navegação --}}
+    <nav id="navbar">
+      {{!-- logo com link para a página inicial --}}
+      <a href="/" id="logo">
+        {{!-- imagem --}}
+        <img src="/img/thoughts_logo.png" alt="Pensamentos">
+      </a>
+      {{!-- lista não ordenada --}}
+      <ul>
+        {{!-- item da lista com link para / --}}
+        <li><a href="/">Pensamentos</a></li>
+        {{!-- session vem de res.locals (definido no index.js): mostra estes links só para quem está logado --}}
+        {{#if session.userid}}    
+          {{!-- item da lista com link para /Pensamentos/dashboard --}}
+          <li><a href="/Pensamentos/dashboard">Dashboard</a></li>
+          {{!-- item da lista com link para /logout --}}
+          <li><a href="/logout">Sair</a></li>
+        {{!-- senão (executa quando a condição/lista for falsa ou vazia) --}}
+        {{else}}
+          {{!-- item da lista com link para /login --}}
+          <li><a href="/login">Entrar</a></li>
+          {{!-- item da lista com link para /register --}}
+          <li><a href="/register">Registrar</a></li>
+        {{!-- fim do if --}}
+        {{/if}}
+      </ul>
+    </nav>
+    {{!-- container que centraliza o conteúdo das páginas --}}
+    <div class="container">
+      {{!-- mensagens flash (req.flash) chegam em messages.message --}}
+      {{#if messages.message}}
+        {{!-- caixa de mensagem --}}
+        <div class="message">
+          {{!-- imprime a mensagem flash --}}
+          {{messages.message}}
+        </div>
+      {{!-- fim do if --}}
+      {{/if}}
+      {{!-- mensagem enviada direto pelo res.render (ex.: erro de login) --}}
+      {{#if message}}
+        {{!-- caixa de mensagem --}}
+        <div class="message">
+          {{!-- imprime a mensagem --}}
+          {{message}}
+        </div>
+      {{!-- fim do if --}}
+      {{/if}}
+      {{!-- aqui o Handlebars injeta o conteúdo de cada view (três chaves = HTML sem escapar) --}}
+      {{{ body }}}
+    </div>
+    {{!-- rodapé da página --}}
+    <footer>
+      {{!-- parágrafo do rodapé; &copy; vira o símbolo © --}}
+      <p><span>Pensamentos</span> &copy; 2026</p>
+    </footer>
+  </body>
+</html>

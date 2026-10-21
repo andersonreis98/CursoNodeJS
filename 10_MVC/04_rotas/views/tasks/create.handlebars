@@ -1,12 +1,21 @@
+{{!-- título principal --}}
 <h1>Criando uma task</h1>
+{{!-- formulário que envia os dados para "/tasks/add" usando o método POST --}}
 <form action="/tasks/add" method="POST">
+  {{!-- agrupa o rótulo e o campo do formulário --}}
   <div class="form-control">
+    {{!-- rótulo do campo "title" --}}
     <label for="title">Título:</label>
+    {{!-- campo do tipo text; o valor chega no servidor com o nome "title" --}}
     <input type="text" name="title" placeholder="O que você vai fazer?">
   </div>
+  {{!-- agrupa o rótulo e o campo do formulário --}}
   <div class="form-control">
+    {{!-- rótulo do campo "description" --}}
     <label for="description">Descrição:</label>
+    {{!-- área de texto com várias linhas; enviada com o nome "description" --}}
     <textarea type="text" name="description" placeholder="O que você vai fazer?"></textarea>
   </div>
+  {{!-- botão que envia o formulário --}}
   <input type="submit" value="Criar">
 </form>

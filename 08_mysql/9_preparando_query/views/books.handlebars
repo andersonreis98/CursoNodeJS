@@ -1,6 +1,11 @@
+{{!-- título principal --}}
 <h1>Livros disponíveis:</h1>
+{{!-- bloco com a classe "books-container" (usada para estilizar no CSS) --}}
 <div class="books-container">
+  {{!-- percorre a lista "books"; dentro do bloco, "this" é o item atual --}}
   {{#each books}}
+    {{!-- bloco que agrupa elementos; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
     <div>#{{this.ID}} - <span class="bold"><a href="/books/{{this.ID}}">{{this.TITLE}}</a></span> - {{this.PAGEQTY}} páginas</div>
+  {{!-- fim do loop each --}}
   {{/each}}
 </div>

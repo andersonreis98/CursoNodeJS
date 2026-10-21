@@ -1,39 +1,39 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+body{ /* estilos de todas as tags <body> */
+    display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+    justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+    align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+    flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
 }
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #f2f2f2;
-    padding: 10px 20px;
+nav{ /* estilos de todas as tags <nav> */
+    display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+    justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+    align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+    width: 100%; /* largura */
+    background-color: #f2f2f2; /* cor de fundo */
+    padding: 10px 20px; /* espaço interno (entre o conteúdo e a borda) */
 }
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #1900ff;
-    padding: 10px 20px;
+footer{ /* estilos de todas as tags <footer> */
+    display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+    justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+    align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+    width: 100%; /* largura */
+    background-color: #1900ff; /* cor de fundo */
+    padding: 10px 20px; /* espaço interno (entre o conteúdo e a borda) */
 }
-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
+div{ /* estilos de todas as tags <div> */
+    display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+    justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+    align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+    flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+    padding: 10px 20px; /* espaço interno (entre o conteúdo e a borda) */
+    border: 1px solid #ccc; /* borda (espessura, estilo e cor) */
+    border-radius: 5px; /* arredonda os cantos */
+    width: 100%; /* largura */
 }
-a{
-    text-decoration: none;
-    color: #1900ff;
-    padding:10px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
+a{ /* estilos de todas as tags <a> */
+    text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+    color: #1900ff; /* cor do texto */
+    padding:10px; /* espaço interno (entre o conteúdo e a borda) */
+    background-color: #f2f2f2; /* cor de fundo */
+    border-radius: 5px; /* arredonda os cantos */
 }

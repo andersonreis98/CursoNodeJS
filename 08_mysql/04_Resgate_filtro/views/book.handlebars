@@ -1,5 +1,9 @@
+{{!-- bloco com o id "book-page" --}}
 <div id="book-page">
+	{{!-- link para /books --}}
 	<a href="/books">Voltar para a lista de livros</a>
+	{{!-- título principal; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 	<h1>{{book.TITLE}}</h1>
+	{{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 	<p>Este livro tem {{book.PAGEQTY}} páginas.</p>
 </div>

@@ -1,24 +1,36 @@
+{{!-- título principal --}}
 <h1>
 	Adicione um usuario
 </h1>
+{{!-- formulário que envia os dados para "/users/create" usando o método POST --}}
 <form action='/users/create' method='POST' class='form'>
+	{{!-- agrupa o rótulo e o campo do formulário --}}
 	<div class='form-control'>
+		{{!-- rótulo do campo "name" --}}
 		<label for='name'>
 			Nome
 		</label>
+		{{!-- campo do tipo text; o valor chega no servidor com o nome "name" --}}
 		<input type='text' name='name' id='name' class='form-control' />
 	</div>
+	{{!-- agrupa o rótulo e o campo do formulário --}}
 	<div class='form-control'>
+		{{!-- rótulo do campo "occupation" --}}
 		<label for='occupation'>
 			Profissão
 		</label>
+		{{!-- campo do tipo text; o valor chega no servidor com o nome "occupation" --}}
 		<input type='text' name='occupation' id='occupation' placeholder='Digite a profissão' />
 	</div>
+    	{{!-- bloco que agrupa elementos --}}
     	<div class='form-control form-checkbox'>
+		{{!-- caixa de seleção (marcado/desmarcado) --}}
 		<input type='checkbox' name='newsletter' checked />
+		{{!-- rótulo do campo "newsletter" --}}
 		<label for='newsletter'>
 			Enviar Promoções?
 		</label>
 	</div>
+    {{!-- botão que envia o formulário --}}
     <input type="submit" value="Cadastrar">
 </form>

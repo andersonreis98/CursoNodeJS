@@ -1,14 +1,25 @@
 <!doctype html>
+<!-- declara que o documento é HTML5 -->
+<!-- elemento raiz da página; "lang" indica o idioma -->
 <html lang="en">
+	<!-- cabeçalho: informações da página que não aparecem no corpo -->
 	<head>
+		<!-- codificação de caracteres (UTF-8 aceita acentos) -->
 		<meta charset="UTF-8" />
+		<!-- deixa a página responsiva em celulares -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- título que aparece na aba do navegador -->
 		<title>Escrevendo arquivos</title>
 	</head>
+	<!-- corpo: tudo que aparece na tela -->
 	<body>
+		<!-- título principal -->
 		<h1>Como você se chama?</h1>
+		<!-- formulário que envia os dados para "/" usando o método GET -->
 		<form action="/" method="GET">
+			<!-- campo do tipo text; o valor chega no servidor com o nome "name" -->
 			<input type="text" name="name" placeholder="Digite seu nome" required />
+			<!-- botão que envia o formulário -->
 			<input type="submit" value="Enviar" />
 		</form>
 	</body>

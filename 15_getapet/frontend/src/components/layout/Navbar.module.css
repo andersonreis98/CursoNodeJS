@@ -1,0 +1,43 @@
+.navbar { /* estilos dos elementos com a classe "navbar" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
+  padding: 1em 1.5em; /* espaço interno (entre o conteúdo e a borda) */
+  background-color: #FFD400; /* cor de fundo */
+  color: #16479d; /* cor do texto */
+}
+
+.navbar_logo { /* estilos dos elementos com a classe "navbar_logo" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+}
+
+.navbar_logo img { /* estilos de "img" que está dentro de ".navbar_logo" */
+  width: 40px; /* largura */
+  margin-right: .8em; /* espaço externo à direita */
+}
+
+.navbar ul { /* estilos de "ul" que está dentro de ".navbar" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
+}
+
+.navbar li, /* seletor ".navbar li" (continua na linha de baixo: as regras valem para todos) */
+.navbar a { /* estilos de "a" que está dentro de ".navbar" */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+  color: #16479d; /* cor do texto */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  cursor: pointer; /* formato do cursor do mouse */
+  transition: .5s; /* animação suave ao mudar propriedades */
+  padding: .5em .8em; /* espaço interno (entre o conteúdo e a borda) */
+  border-radius: 5px; /* arredonda os cantos */
+}
+
+.navbar li:hover { /* estilo quando o mouse passa por cima */
+  background-color: #16479d; /* cor de fundo */
+  color: #FFF; /* cor do texto */
+}
+
+.navbar li:hover > a { /* estilo quando o mouse passa por cima */
+  color: #FFF; /* cor do texto */
+}

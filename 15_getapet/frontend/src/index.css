@@ -1,0 +1,17 @@
+* { /* seletor universal: aplica a todos os elementos */
+  padding: 0; /* espaço interno (entre o conteúdo e a borda) */
+  margin: 0; /* espaço externo (fora da borda) */
+  font-family: Helvetica; /* fonte (com alternativas, caso a primeira não exista) */
+  box-sizing: border-box; /* border-box: largura inclui padding e borda */
+}
+
+h1 { /* estilos de todas as tags <h1> */
+  color: #16479d; /* cor do texto */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  font-size: 2.1em; /* tamanho da fonte */
+}
+
+.bold { /* estilos dos elementos com a classe "bold" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  color: #16479d; /* cor do texto */
+}

@@ -1,137 +1,137 @@
-* {
-  font-family: Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+* { /* seletor universal: aplica a todos os elementos */
+  font-family: Helvetica, sans-serif; /* fonte (com alternativas, caso a primeira não exista) */
+  margin: 0; /* espaço externo (fora da borda) */
+  padding: 0; /* espaço interno (entre o conteúdo e a borda) */
 }
 
-#navbar {
-  border-bottom: 1px solid #ccc;
-  padding: 1em;
-  margin-bottom: 1em;
+#navbar { /* estilos do elemento com id "navbar" */
+  border-bottom: 1px solid #ccc; /* borda inferior */
+  padding: 1em; /* espaço interno (entre o conteúdo e a borda) */
+  margin-bottom: 1em; /* espaço externo embaixo */
 }
 
-#navbar ul {
-  display: flex;
-  list-style: none;
+#navbar ul { /* estilos de "ul" que está dentro de "#navbar" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
 }
 
-#navbar ul li {
-  margin-left: 1em;
+#navbar ul li { /* estilos de "li" que está dentro de "#navbar" */
+  margin-left: 1em; /* espaço externo à esquerda */
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 1em;
+h1 { /* estilos de todas as tags <h1> */
+  text-align: center; /* alinhamento horizontal do texto */
+  margin-bottom: 1em; /* espaço externo embaixo */
 }
 
-.form {
-  width: 450px;
-  margin: 0 auto;
+.form { /* estilos dos elementos com a classe "form" */
+  width: 450px; /* largura */
+  margin: 0 auto; /* espaço externo (fora da borda) */
 }
 
-.form-control {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.5em;
+.form-control { /* estilos dos elementos com a classe "form-control" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+  margin-bottom: 0.5em; /* espaço externo embaixo */
 }
 
-.form-checkbox {
-  flex-direction: row;
+.form-checkbox { /* estilos dos elementos com a classe "form-checkbox" */
+  flex-direction: row; /* direção dos itens no flex (linha ou coluna) */
 }
 
-.form-checkbox input {
-  margin-right: 10px;
+.form-checkbox input { /* estilos de "input" que está dentro de ".form-checkbox" */
+  margin-right: 10px; /* espaço externo à direita */
 }
 
-.form-control label {
-  font-weight: bold;
-  margin-bottom: 0.3em;
+.form-control label { /* estilos de "label" que está dentro de ".form-control" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  margin-bottom: 0.3em; /* espaço externo embaixo */
 }
 
-.form-control input {
-  padding: 5px;
+.form-control input { /* estilos de "input" que está dentro de ".form-control" */
+  padding: 5px; /* espaço interno (entre o conteúdo e a borda) */
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 10px;
+.container { /* estilos dos elementos com a classe "container" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-wrap: wrap; /* permite os itens quebrarem para a linha seguinte */
+  max-width: 1200px; /* largura máxima */
+  margin: 0 auto; /* espaço externo (fora da borda) */
+  gap: 10px; /* espaço entre os itens do flex/grid */
 }
 
-.container .item {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  flex: 1 1 29%;
-  max-width: 29%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.container .item { /* estilos de ".item" que está dentro de ".container" */
+  border: 1px solid #ccc; /* borda (espessura, estilo e cor) */
+  border-radius: 5px; /* arredonda os cantos */
+  padding: 20px; /* espaço interno (entre o conteúdo e a borda) */
+  flex: 1 1 29%; /* quanto o item cresce/encolhe dentro do flex */
+  max-width: 29%; /* largura máxima */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+  justify-content: space-around; /* alinhamento dos itens no eixo principal do flex */
 }
 
-.container .item h2,
-.container .item p {
-  margin-bottom: 0.8em;
+.container .item h2, /* seletor ".container .item h2" (continua na linha de baixo: as regras valem para todos) */
+.container .item p { /* estilos de "p" que está dentro de ".container" */
+  margin-bottom: 0.8em; /* espaço externo embaixo */
 }
 
-.actions {
-  display: flex;
-  justify-content: space-between;
+.actions { /* estilos dos elementos com a classe "actions" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
 }
 
-.actions a,
-.actions input {
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  text-decoration: none;
-  background-color: #fff;
-  padding: 5px;
-  font-size: 15px;
-  color: #000;
-  cursor: pointer;
+.actions a, /* seletor ".actions a" (continua na linha de baixo: as regras valem para todos) */
+.actions input { /* estilos de "input" que está dentro de ".actions" */
+  border: 1px solid #bbb; /* borda (espessura, estilo e cor) */
+  border-radius: 5px; /* arredonda os cantos */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+  background-color: #fff; /* cor de fundo */
+  padding: 5px; /* espaço interno (entre o conteúdo e a borda) */
+  font-size: 15px; /* tamanho da fonte */
+  color: #000; /* cor do texto */
+  cursor: pointer; /* formato do cursor do mouse */
 }
 
-.actions .details-btn {
-  border-color: #004085;
-  color: #004085;
+.actions .details-btn { /* estilos de ".details-btn" que está dentro de ".actions" */
+  border-color: #004085; /* cor da borda */
+  color: #004085; /* cor do texto */
 }
 
-.actions .delete-btn {
-  border-color: #721c24;
-  color: #721c24;
+.actions .delete-btn { /* estilos de ".delete-btn" que está dentro de ".actions" */
+  border-color: #721c24; /* cor da borda */
+  color: #721c24; /* cor do texto */
 }
 
-.address-container {
-  max-width: 1000px;
-  margin: 1em auto;
-  padding-top: 1em;
-  border-top: 1px solid #ccc;
+.address-container { /* estilos dos elementos com a classe "address-container" */
+  max-width: 1000px; /* largura máxima */
+  margin: 1em auto; /* espaço externo (fora da borda) */
+  padding-top: 1em; /* espaço interno em cima */
+  border-top: 1px solid #ccc; /* borda superior */
 }
 
-.address-container h2 {
-  margin-bottom: 1em;
+.address-container h2 { /* estilos de "h2" que está dentro de ".address-container" */
+  margin-bottom: 1em; /* espaço externo embaixo */
 }
 
-.address-container form {
-  width: 300px;
+.address-container form { /* estilos de "form" que está dentro de ".address-container" */
+  width: 300px; /* largura */
 }
 
-.address-list {
-  margin-top: 1em;
-  padding-top: 1em;
-  border-top: 1px solid #ccc;
-  padding-bottom: 200px;
+.address-list { /* estilos dos elementos com a classe "address-list" */
+  margin-top: 1em; /* espaço externo em cima */
+  padding-top: 1em; /* espaço interno em cima */
+  border-top: 1px solid #ccc; /* borda superior */
+  padding-bottom: 200px; /* espaço interno embaixo */
 }
 
-.address-list div {
-  display: flex;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #ddd;
+.address-list div { /* estilos de "div" que está dentro de ".address-list" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  padding-bottom: 1em; /* espaço interno embaixo */
+  border-bottom: 1px solid #ddd; /* borda inferior */
 }
 
-.address-list form {
-  margin-left: 1em;
+.address-list form { /* estilos de "form" que está dentro de ".address-list" */
+  margin-left: 1em; /* espaço externo à esquerda */
 }

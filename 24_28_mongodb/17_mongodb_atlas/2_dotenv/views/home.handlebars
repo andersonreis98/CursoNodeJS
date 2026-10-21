@@ -1,0 +1,47 @@
+{{!-- título principal --}}
+<h1>Suas notas:</h1>
+{{!-- tabela --}}
+<table class="table">
+  {{!-- cabeçalho da tabela --}}
+  <thead>
+    {{!-- linha da tabela --}}
+    <tr>
+      {{!-- célula de cabeçalho da tabela --}}
+      <th scope="col">#</th>
+      {{!-- célula de cabeçalho da tabela --}}
+      <th scope="col">Título:</th>
+      {{!-- célula de cabeçalho da tabela --}}
+      <th scope="col">Ações:</th>
+    </tr>
+  </thead>
+  {{!-- corpo da tabela --}}
+  <tbody>
+    {{!-- percorre a lista "notes"; dentro do bloco, "this" é o item atual --}}
+    {{#each notes}}
+    {{!-- linha da tabela --}}
+    <tr>
+      {{!-- @index é a posição do item no each (começa em 0) --}}
+      <th scope="row">{{ @index }}</th>
+      {{!-- título da nota com link para os detalhes --}}
+      <td class="title-column"><a href="notes/{{ this._id }}">{{ this.title }}</a></td>
+      {{!-- coluna com os botões de ação --}}
+      <td class="actions-column">
+        {{!-- link para notes/edit/{{ this._id }}; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+        <a href="notes/edit/{{ this._id }}" class="btn btn-primary">Editar</a>
+        {{!-- formulário que envia os dados para "notes/delete" usando o método POST --}}
+        <form action="notes/delete" method="POST">
+          {{!-- campo escondido: envia "id" junto com o formulário sem aparecer na tela; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+          <input type="hidden" name="id" value={{ this._id }}>
+          {{!-- botão que envia o formulário --}}
+          <input class="btn btn-danger" type="submit" value="Remover">
+        </form>
+      </td>
+    </tr>
+    {{!-- else do each: executado quando a lista está vazia --}}
+    {{ else }}
+      {{!-- parágrafo de texto --}}
+      <p>Não há notas no sistema ainda, <a href="notes">clique aqui para adicionar.</a></p>
+    {{!-- fim do loop each --}}
+    {{/each}}
+  </tbody>
+</table>

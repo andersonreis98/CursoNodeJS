@@ -1,18 +1,27 @@
+{{!-- título principal --}}
 <h1>
 	Atualize Seu Livro:
 </h1>
+{{!-- formulário que envia os dados para "/books/updatebook" usando o método post --}}
 <form class='form' action='/books/updatebook' method='post'>
+	{{!-- campo escondido: envia "id" junto com o formulário sem aparecer na tela; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 	<input type='hidden' name='id' value="{{book.ID}}" />
+	{{!-- agrupa o rótulo e o campo do formulário --}}
 	<div class='form-control'>
+		{{!-- rótulo do campo "title" --}}
 		<label for='title'>
 			Título:
 		</label>
+		{{!-- campo do tipo text; o valor chega no servidor com o nome "title"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 		<input type='text' name='title' placeholder='Digite o título' value='{{book.TITLE}}' />
 	</div>
+	{{!-- agrupa o rótulo e o campo do formulário --}}
 	<div class='form-control'>
+		{{!-- rótulo do campo "pagesqty" --}}
 		<label for='pagesqty'>
 			Páginas:
 		</label>
+		{{!-- campo de entrada --}}
 		<input
 			type='number'
 			name='pagesqty'
@@ -20,5 +29,6 @@
 			value='{{book.PAGEQTY}}'
 		/>
 	</div>
+	{{!-- botão que envia o formulário --}}
 	<input type='submit' value='Editar' />
 </form>

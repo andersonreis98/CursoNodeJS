@@ -1,0 +1,25 @@
+{{!-- título principal --}}
+<h1>Todos os produtos</h1>
+{{!-- bloco com a classe "products" (usada para estilizar no CSS) --}}
+<div class="products">
+  {{!-- percorre a lista "products"; dentro do bloco, "this" é o item atual --}}
+  {{#each products}}
+    {{!-- bloco com a classe "product" (usada para estilizar no CSS) --}}
+    <div class="product">
+      {{!-- imagem cujo endereço vem dos dados enviados à view --}}
+      <img src="{{this.image}}" alt="{{this.name}}">
+      {{!-- título de terceiro nível; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+      <h3>{{this.name}}</h3>
+      {{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+      <p>R${{this.price}}</p>
+      {{!-- bloco com a classe "actions" (usada para estilizar no CSS) --}}
+      <div class="actions">
+        {{!-- link para /{{this._id}}; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+        <a href="/{{this._id}}">Detalhes</a>
+        {{!-- link para /edit/{{this._id}}; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+        <a href="/edit/{{this._id}}">Editar</a>
+      </div>
+    </div>
+  {{!-- fim do loop each --}}
+  {{/each}}
+</div>

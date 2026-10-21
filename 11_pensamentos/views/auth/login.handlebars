@@ -1,0 +1,26 @@
+{{!-- bloco com a classe "auth-container" (usada para estilizar no CSS) --}}
+<div class="auth-container">
+    {{!-- subtítulo --}}
+    <h2>Entrar</h2>
+    {{!-- formulário que envia os dados para "/login" usando o método POST --}}
+    <form action="/login" method="POST">
+        {{!-- agrupa o rótulo e o campo do formulário --}}
+        <div class="form-control">
+            {{!-- rótulo do campo "email" --}}
+            <label for="email">E-mail:</label>
+            {{!-- campo do tipo email; o valor chega no servidor com o nome "email" --}}
+            <input type="email" name="email" placeholder="Digite o seu e-mail">
+        </div>
+            {{!-- agrupa o rótulo e o campo do formulário --}}
+            <div class="form-control">
+            {{!-- rótulo do campo "password" --}}
+            <label for="password">Senha:</label>
+            {{!-- campo do tipo password; o valor chega no servidor com o nome "password" --}}
+            <input type="password" name="password" placeholder="Digite a sua senha">
+        </div>
+        {{!-- botão que envia o formulário --}}
+        <input type="submit" value="Entrar">
+        {{!-- parágrafo de texto --}}
+        <p>Não tem conta? <a href="/register">Clique aqui</a></p>
+    </form>
+</div>

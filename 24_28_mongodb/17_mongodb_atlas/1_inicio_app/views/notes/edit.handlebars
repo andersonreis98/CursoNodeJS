@@ -1,0 +1,25 @@
+{{!-- link para / --}}
+<a href="/">Voltar</a>
+{{!-- subtítulo --}}
+<h2>Editar nota:</h2>
+{{!-- formulário que envia os dados para "/notes/update" usando o método POST --}}
+<form method="POST" action="/notes/update">
+  {{!-- campo escondido: envia "id" junto com o formulário sem aparecer na tela; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+  <input type="hidden" name="id" value="{{ note._id }}">
+  {{!-- agrupa rótulo e campo; mb-3 é uma classe do Bootstrap que dá margem embaixo --}}
+  <div class="mb-3">
+    {{!-- rótulo do campo "title" --}}
+    <label for="title" class="form-label">Título:</label>
+    {{!-- campo de entrada; o valor chega no servidor com o nome "title"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+    <input type="text" class="form-control" id="title" name="title" value="{{ note.title }}">
+  </div>
+  {{!-- agrupa rótulo e campo; mb-3 é uma classe do Bootstrap que dá margem embaixo --}}
+  <div class="mb-3">
+    {{!-- rótulo do campo "description" --}}
+    <label for="description" class="form-label">Descrição:</label>
+    {{!-- área de texto com várias linhas; enviada com o nome "description"; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
+    <textarea type="text" class="form-control" id="description" name="description">{{ note.desc }}</textarea>
+  </div>
+  {{!-- botão que envia o formulário --}}
+  <button type="submit" class="btn btn-primary">Editar</button>
+</form>

@@ -1,0 +1,40 @@
+{{!-- bloco com a classe "auth-container" (usada para estilizar no CSS) --}}
+<div class="auth-container">
+    {{!-- subtítulo --}}
+    <h2>Registrar</h2>
+    {{!-- formulário que envia os dados para "/register" usando o método POST --}}
+    <form action="/register" method="POST">
+        {{!-- agrupa o rótulo e o campo do formulário --}}
+        <div class="form-control">
+            {{!-- rótulo do campo "text" --}}
+            <label for="text">Nome:</label>
+            {{!-- campo do tipo name; o valor chega no servidor com o nome "name" --}}
+            <input type="name" name="name" placeholder="Digite o seu nome" required>
+        </div>
+        {{!-- agrupa o rótulo e o campo do formulário --}}
+        <div class="form-control">
+            {{!-- rótulo do campo "email" --}}
+            <label for="email">E-mail:</label>
+            {{!-- campo do tipo email; o valor chega no servidor com o nome "email" --}}
+            <input type="email" name="email" placeholder="Digite o seu e-mail" required>
+        </div>
+            {{!-- agrupa o rótulo e o campo do formulário --}}
+            <div class="form-control">
+            {{!-- rótulo do campo "password" --}}
+            <label for="password">Senha:</label>
+            {{!-- campo do tipo password; o valor chega no servidor com o nome "password" --}}
+            <input type="password" name="password" placeholder="Digite a sua senha" required>
+        </div>
+        {{!-- agrupa o rótulo e o campo do formulário --}}
+        <div class="form-control">
+            {{!-- rótulo do campo "confirmpassword" --}}
+            <label for="confirmpassword">Confirmação de senha:</label>
+            {{!-- campo do tipo password; o valor chega no servidor com o nome "confirmpassword" --}}
+            <input type="password" name="confirmpassword" placeholder="Confirme a sua senha" required>
+        </div>
+        {{!-- botão que envia o formulário --}}
+        <input type="submit" value="Cadastrar">
+        {{!-- parágrafo de texto --}}
+        <p>Já tem conta? <a href="/login">Clique aqui</a></p>
+    </form>
+</div>

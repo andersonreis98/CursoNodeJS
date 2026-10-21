@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{{!-- declara que o documento é HTML5 --}}
+{{!-- elemento raiz da página; "lang" indica o idioma --}}
+<html lang="en">
+  {{!-- cabeçalho: informações da página que não aparecem no corpo --}}
+  <head>
+    {{!-- codificação de caracteres (UTF-8 aceita acentos) --}}
+    <meta charset="UTF-8" />
+    {{!-- pede ao navegador Edge/IE o modo de renderização mais recente --}}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{!-- deixa a página responsiva em celulares --}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{!-- título que aparece na aba do navegador --}}
+    <title>Node.js + MongoDB</title>
+    {{!-- carrega o arquivo CSS (servido pela pasta pública) --}}
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  {{!-- corpo: tudo que aparece na tela --}}
+  <body>
+    {{!-- barra de navegação --}}
+    <nav id="navbar">
+      {{!-- lista não ordenada --}}
+      <ul>
+        {{!-- item da lista com link para / --}}
+        <li><a href="/">Produtos</a></li>
+      </ul>
+    </nav>
+    {{!-- aqui o Handlebars injeta o conteúdo de cada view (três chaves = HTML sem escapar) --}}
+    {{{ body }}}
+  </body>
+</html>

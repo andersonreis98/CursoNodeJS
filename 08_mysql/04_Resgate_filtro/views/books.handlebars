@@ -1,15 +1,23 @@
+{{!-- título principal --}}
 <h1>
 	Livros Disponiveis
 </h1>
+{{!-- bloco com a classe "books-container" (usada para estilizar no CSS) --}}
 <div class='books-container'>
+	{{!-- percorre a lista "books"; dentro do bloco, "this" é o item atual --}}
 	{{#each books}}
+		{{!-- bloco que agrupa elementos --}}
 		<div>
 			#{{this.ID}} -
+			{{!-- trecho em destaque (atenção: <spin> não existe em HTML, o correto seria <span>) --}}
 			<spin class='bold'>
+				{{!-- imprime um valor vindo do servidor --}}
 				{{this.TITLE}}
 			</spin>
+			{{!-- link para /books/{{this.ID}}; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 			<a href="/books/{{this.ID}}">Ver Detalhes</a>
 			- {{this.PAGEQTY}} páginas
 		</div>
+	{{!-- fim do loop each --}}
 	{{/each}}
 </div>

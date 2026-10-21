@@ -1,7 +1,7 @@
-body{
-    background-color: #d9d9d9d9;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 2em;
+body{ /* estilos de todas as tags <body> */
+    background-color: #d9d9d9d9; /* cor de fundo */
+    text-align: center; /* alinhamento horizontal do texto */
+    font-family: Arial, sans-serif; /* fonte (com alternativas, caso a primeira não exista) */
+    margin: 0; /* espaço externo (fora da borda) */
+    padding: 2em; /* espaço interno (entre o conteúdo e a borda) */
 }

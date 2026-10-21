@@ -1,0 +1,27 @@
+* { /* seletor universal: aplica a todos os elementos */
+  font-family: Helvetica, sans-serif; /* fonte (com alternativas, caso a primeira não exista) */
+  margin: 0; /* espaço externo (fora da borda) */
+  padding: 0; /* espaço interno (entre o conteúdo e a borda) */
+  background-color: #222; /* cor de fundo */
+  color: #fff; /* cor do texto */
+}
+
+/* BARRA DE NAVEGAÇÃO */
+#navbar { /* estilos do elemento com id "navbar" */
+  padding: 1.2em 2.4em; /* espaço interno (entre o conteúdo e a borda) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+
+  border-bottom: 1px solid #fff; /* borda inferior */
+}
+
+#navbar ul { /* estilos de "ul" que está dentro de "#navbar" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
+}
+
+#navbar ul li { /* estilos de "li" que está dentro de "#navbar" */
+  margin-left: 1em; /* espaço externo à esquerda */
+}

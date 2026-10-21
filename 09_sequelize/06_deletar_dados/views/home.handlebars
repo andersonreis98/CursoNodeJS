@@ -1,16 +1,27 @@
+{{!-- título principal --}}
 <h1>Usuários cadastrados</h1>
+{{!-- container que centraliza o conteúdo das páginas --}}
 <div class="container">
+  {{!-- percorre a lista "users"; dentro do bloco, "this" é o item atual --}}
   {{#each users}}
+    {{!-- bloco com a classe "item" (usada para estilizar no CSS) --}}
     <div class="item">
+      {{!-- subtítulo; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
       <h2>{{this.name}}</h2>
+      {{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
       <p>{{this.occupation}}</p>
+      {{!-- bloco com a classe "actions" (usada para estilizar no CSS) --}}
       <div class="actions">
+        {{!-- link para /users/{{this.id}}; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
         <a href="/users/{{this.id}}" class="details-btn">Ver detalhes</a>
+        {{!-- formulário que envia os dados para "/users/delete/{{this.id}}" usando o método POST --}}
         <form action="/users/delete/{{this.id}}" method="POST">
+          {{!-- botão que envia o formulário --}}
           <input type="submit" value="Excluir" class="delete-btn">
         </form>
       </div>
     </div>
+  {{!-- fim do loop each --}}
   {{/each}}
 
 </div>

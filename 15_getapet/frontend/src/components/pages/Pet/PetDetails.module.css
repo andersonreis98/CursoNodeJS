@@ -1,0 +1,39 @@
+.pet_details_container { /* estilos dos elementos com a classe "pet_details_container" */
+  text-align: center; /* alinhamento horizontal do texto */
+}
+
+.pet_details_container p { /* estilos de "p" que está dentro de ".pet_details_container" */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.petdetails_header { /* estilos dos elementos com a classe "petdetails_header" */
+  margin-bottom: 2em; /* espaço externo embaixo */
+}
+
+.pet_images { /* estilos dos elementos com a classe "pet_images" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: center; /* alinhamento dos itens no eixo principal do flex */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.pet_images img { /* estilos de "img" que está dentro de ".pet_images" */
+  max-height: 200px; /* altura máxima */
+  margin-right: 1em; /* espaço externo à direita */
+}
+
+.pet_details_container button { /* estilos de "button" que está dentro de ".pet_details_container" */
+  border-radius: 8px; /* arredonda os cantos */
+  background-color: #25b456; /* cor de fundo */
+  color: #fff; /* cor do texto */
+  border: none; /* borda (espessura, estilo e cor) */
+  max-width: 200px; /* largura máxima */
+  min-height: 2.5rem; /* altura mínima (vh = % da altura da tela) */
+  width: 100%; /* largura */
+  cursor: pointer; /* formato do cursor do mouse */
+  font-size: 1.1em; /* tamanho da fonte */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+}
+
+.pet_details_container button:hover { /* estilo quando o mouse passa por cima */
+  background-color: #1c8a42; /* cor de fundo */
+}

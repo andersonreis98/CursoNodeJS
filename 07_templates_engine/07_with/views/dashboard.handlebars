@@ -1,14 +1,21 @@
+{{!-- título principal --}}
 <h1>
 	Dashboard
 </h1>
+{{!-- parágrafo de texto --}}
 <p>
 	Bem-vindo ao painel de controle!
 </p>
+{{!-- link para a página inicial --}}
 <a href='/'>
 	voltar
 </a>
+{{!-- lista não ordenada --}}
 <ul>
+	{{!-- percorre a lista "items"; dentro do bloco, "this" é o item atual --}}
 	{{#each items}}
+		{{!-- item da lista; {this} é o valor do item atual do each; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
 		<li>{{this}}</li>
+	{{!-- fim do loop each --}}
 	{{/each}}
 </ul>

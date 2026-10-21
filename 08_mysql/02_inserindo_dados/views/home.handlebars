@@ -1,18 +1,27 @@
+{{!-- título principal --}}
 <h1>
 	Cadastre Seu Livro:
 </h1>
+{{!-- formulário que envia os dados para "/books/insertbook" usando o método post --}}
 <form class='form' action='/books/insertbook' method='post'>
+	{{!-- agrupa o rótulo e o campo do formulário --}}
 	<div class='form-control'>
+		{{!-- rótulo do campo "title" --}}
 		<label for='title'>
 			Título:
 		</label>
+		{{!-- campo do tipo text; o valor chega no servidor com o nome "title" --}}
 		<input type='text' name='title' placeholder='Digite o título' required />
 	</div>
+	{{!-- agrupa o rótulo e o campo do formulário --}}
 	<div class='form-control'>
+		{{!-- rótulo do campo "pagesqty" --}}
 		<label for='pagesqty'>
 			Páginas:
 		</label>
+		{{!-- campo do tipo number; o valor chega no servidor com o nome "pagesqty" --}}
 		<input type='number' name='pagesqty' placeholder='Quantidade de páginas' required />
 	</div>
+	{{!-- botão que envia o formulário --}}
 	<input type='submit' value='Cadastrar' />
 </form>

@@ -1,0 +1,8 @@
+.addpet_header { /* estilos dos elementos com a classe "addpet_header" */
+  text-align: center; /* alinhamento horizontal do texto */
+  margin-bottom: 1.2em; /* espaço externo embaixo */
+}
+
+.addpet_header h1 { /* estilos de "h1" que está dentro de ".addpet_header" */
+  margin-bottom: 0.2em; /* espaço externo embaixo */
+}

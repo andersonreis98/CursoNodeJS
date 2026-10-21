@@ -1,119 +1,119 @@
-* {
-  font-family: Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+* { /* seletor universal: aplica a todos os elementos */
+  font-family: Helvetica, sans-serif; /* fonte (com alternativas, caso a primeira não exista) */
+  margin: 0; /* espaço externo (fora da borda) */
+  padding: 0; /* espaço interno (entre o conteúdo e a borda) */
 }
 
-#navbar {
-  padding: 1em 2em;
-  margin-bottom: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #db4c3f;
-  color: #fff;
+#navbar { /* estilos do elemento com id "navbar" */
+  padding: 1em 2em; /* espaço interno (entre o conteúdo e a borda) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
+  align-items: center; /* alinhamento dos itens no eixo cruzado do flex */
+  background-color: #db4c3f; /* cor de fundo */
+  color: #fff; /* cor do texto */
 }
 
-#navbar ul {
-  display: flex;
-  list-style: none;
+#navbar ul { /* estilos de "ul" que está dentro de "#navbar" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
 }
 
-#navbar ul li {
-  margin-left: 1em;
+#navbar ul li { /* estilos de "li" que está dentro de "#navbar" */
+  margin-left: 1em; /* espaço externo à esquerda */
 }
 
-#navbar ul li a {
-  text-decoration: none;
-  color: #fff;
+#navbar ul li a { /* estilos de "a" que está dentro de "#navbar" */
+  text-decoration: none; /* decoração do texto (none remove o sublinhado dos links) */
+  color: #fff; /* cor do texto */
 }
 
-.container {
-  max-width: 450px;
-  margin: 2em auto;
+.container { /* estilos dos elementos com a classe "container" */
+  max-width: 450px; /* largura máxima */
+  margin: 2em auto; /* espaço externo (fora da borda) */
 }
 
-.container form {
-  margin-top: 1.5em;
+.container form { /* estilos de "form" que está dentro de ".container" */
+  margin-top: 1.5em; /* espaço externo em cima */
 }
 
-.form-control {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1em;
+.form-control { /* estilos dos elementos com a classe "form-control" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+  margin-bottom: 1em; /* espaço externo embaixo */
 }
 
-.form-control label {
-  font-weight: bold;
-  margin-bottom: 0.3em;
+.form-control label { /* estilos de "label" que está dentro de ".form-control" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  margin-bottom: 0.3em; /* espaço externo embaixo */
 }
 
-.form-control input,
-.form-control textarea {
-  padding: 7px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
+.form-control input, /* seletor ".form-control input" (continua na linha de baixo: as regras valem para todos) */
+.form-control textarea { /* estilos de "textarea" que está dentro de ".form-control" */
+  padding: 7px; /* espaço interno (entre o conteúdo e a borda) */
+  border-radius: 3px; /* arredonda os cantos */
+  border: 1px solid #ccc; /* borda (espessura, estilo e cor) */
 }
 
-form input[type='submit'] {
-  background-color: #db4c3f;
-  color: #fff;
-  padding: 0.7em 1.5em;
-  font-weight: bold;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
+form input[type='submit'] { /* estilos de "input[type='submit']" que está dentro de "form" */
+  background-color: #db4c3f; /* cor de fundo */
+  color: #fff; /* cor do texto */
+  padding: 0.7em 1.5em; /* espaço interno (entre o conteúdo e a borda) */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  border-radius: 5px; /* arredonda os cantos */
+  border: none; /* borda (espessura, estilo e cor) */
+  cursor: pointer; /* formato do cursor do mouse */
 }
 
-.task-list {
-  list-style: none;
-  margin-top: 1em;
+.task-list { /* estilos dos elementos com a classe "task-list" */
+  list-style: none; /* estilo dos marcadores da lista (none remove as bolinhas) */
+  margin-top: 1em; /* espaço externo em cima */
 }
 
-.task-list li {
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #efefef;
-  display: flex;
-  justify-content: space-between;
+.task-list li { /* estilos de "li" que está dentro de ".task-list" */
+  padding: 0.5em; /* espaço interno (entre o conteúdo e a borda) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+  border-bottom: 1px solid #efefef; /* borda inferior */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  justify-content: space-between; /* alinhamento dos itens no eixo principal do flex */
 }
 
-.task-list .title {
-  font-weight: bold;
-  color: #db4c3f;
-  transition: 0.5s;
-  font-size: 1.2em;
+.task-list .title { /* estilos de ".title" que está dentro de ".task-list" */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  color: #db4c3f; /* cor do texto */
+  transition: 0.5s; /* animação suave ao mudar propriedades */
+  font-size: 1.2em; /* tamanho da fonte */
 }
 
-.task-list .title:hover {
-  color: #333;
+.task-list .title:hover { /* estilo quando o mouse passa por cima */
+  color: #333; /* cor do texto */
 }
 
-.actions {
-  display: flex;
+.actions { /* estilos dos elementos com a classe "actions" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
 }
 
-.actions i {
-  font-size: 1.5em;
-  margin-right: 0.6em;
-  color: #333;
+.actions i { /* estilos de "i" que está dentro de ".actions" */
+  font-size: 1.5em; /* tamanho da fonte */
+  margin-right: 0.6em; /* espaço externo à direita */
+  color: #333; /* cor do texto */
 }
 
-.actions i:hover {
-  color: #db4c3f;
+.actions i:hover { /* estilo quando o mouse passa por cima */
+  color: #db4c3f; /* cor do texto */
 }
 
-.actions form {
-  margin: 0;
+.actions form { /* estilos de "form" que está dentro de ".actions" */
+  margin: 0; /* espaço externo (fora da borda) */
 }
 
-.actions button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.actions button { /* estilos de "button" que está dentro de ".actions" */
+  background-color: transparent; /* cor de fundo */
+  border: none; /* borda (espessura, estilo e cor) */
+  cursor: pointer; /* formato do cursor do mouse */
 }
 
-.title.done {
-  text-decoration: line-through;
-  color: #ccc;
+.title.done { /* estilos dos elementos com a classe "title.done" */
+  text-decoration: line-through; /* decoração do texto (none remove o sublinhado dos links) */
+  color: #ccc; /* cor do texto */
 }

@@ -1,0 +1,21 @@
+.form_control { /* estilos dos elementos com a classe "form_control" */
+  display: flex; /* tipo de exibição (flex, block, inline, grid...) */
+  flex-direction: column; /* direção dos itens no flex (linha ou coluna) */
+  margin-bottom: 1em; /* espaço externo embaixo */
+}
+
+.form_control label { /* estilos de "label" que está dentro de ".form_control" */
+  margin-bottom: 0.3em; /* espaço externo embaixo */
+  font-weight: bold; /* espessura da fonte (bold = negrito) */
+  font-size: 0.8em; /* tamanho da fonte */
+}
+
+.form_control input { /* estilos de "input" que está dentro de ".form_control" */
+  padding: 0.7em; /* espaço interno (entre o conteúdo e a borda) */
+  border: 1px solid #777; /* borda (espessura, estilo e cor) */
+  border-radius: 5px; /* arredonda os cantos */
+}
+
+.form_control input::placeholder { /* texto de exemplo dentro do campo */
+  color: #7b7b7b; /* cor do texto */
+}

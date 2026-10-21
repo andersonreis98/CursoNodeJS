@@ -1,0 +1,10 @@
+.rounded_image { /* estilos dos elementos com a classe "rounded_image" */
+  width: 200px; /* largura */
+  height: 200px; /* altura */
+  border-radius: 100%; /* arredonda os cantos */
+}
+
+.rounded_image.px75 { /* estilos dos elementos com a classe "rounded_image.px75" */
+  width: 75px; /* largura */
+  height: 75px; /* altura */
+}

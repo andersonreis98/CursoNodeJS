@@ -1,0 +1,35 @@
+{{!-- título principal --}}
+<h1>Criar produto</h1>
+{{!-- formulário que envia os dados para "/create" usando o método POST --}}
+<form action="/create" method="POST">
+    {{!-- agrupa o rótulo e o campo do formulário --}}
+    <div class="form-control">
+        {{!-- rótulo do campo "name" --}}
+        <label for="name">Nome do produto:</label>
+        {{!-- campo do tipo text; o valor chega no servidor com o nome "name" --}}
+        <input type="text" name="name" placeholder="Digite o nome do produto">
+    </div>
+    {{!-- agrupa o rótulo e o campo do formulário --}}
+    <div class="form-control">
+        {{!-- rótulo do campo "price" --}}
+        <label for="price">Preço do produto:</label>
+        {{!-- campo do tipo text; o valor chega no servidor com o nome "price" --}}
+        <input type="text" name="price" placeholder="Digite o preço">
+    </div>
+    {{!-- agrupa o rótulo e o campo do formulário --}}
+    <div class="form-control">
+        {{!-- rótulo do campo "description" --}}
+        <label for="description">Descrição do produto:</label>
+        {{!-- área de texto com várias linhas; enviada com o nome "description" --}}
+        <textarea name="description" placeholder="Descrição do produto"></textarea>
+    </div>
+    {{!-- agrupa o rótulo e o campo do formulário --}}
+    <div class="form-control">
+        {{!-- rótulo do campo "image" --}}
+        <label for="image">Imagem:</label>
+        {{!-- campo do tipo text; o valor chega no servidor com o nome "image" --}}
+        <input type="text" name="image" placeholder="Insira a URL da imagem" />
+    </div>
+    {{!-- botão que envia o formulário --}}
+    <input type="submit" class="btn" value="Enviar">
+</form>

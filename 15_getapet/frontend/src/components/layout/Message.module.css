@@ -1,0 +1,22 @@
+.message { /* estilos dos elementos com a classe "message" */
+  width: 100%; /* largura */
+  padding: 1em; /* espaço interno (entre o conteúdo e a borda) */
+  border: 1px solid #000; /* borda (espessura, estilo e cor) */
+  margin: 0 auto; /* espaço externo (fora da borda) */
+  text-align: center; /* alinhamento horizontal do texto */
+  max-width: 60%; /* largura máxima */
+  margin: 1em auto; /* espaço externo (fora da borda) */
+  border-radius: 5px; /* arredonda os cantos */
+}
+
+.success { /* estilos dos elementos com a classe "success" */
+  color: #155724; /* cor do texto */
+  background-color: #d4edda; /* cor de fundo */
+  border-color: #c3e6cb; /* cor da borda */
+}
+
+.error { /* estilos dos elementos com a classe "error" */
+  color: #721c24; /* cor do texto */
+  background-color: #f8d7da; /* cor de fundo */
+  border-color: #f5c6cb; /* cor da borda */
+}

@@ -1,9 +1,15 @@
+{{!-- título principal --}}
 <h1>Usuários cadastrados</h1>
+{{!-- container que centraliza o conteúdo das páginas --}}
 <div class="container">
+  {{!-- percorre a lista "users"; dentro do bloco, "this" é o item atual --}}
   {{#each users}}
+    {{!-- bloco com a classe "item" (usada para estilizar no CSS) --}}
     <div class="item">
+      {{!-- parágrafo de texto; o que está entre {{ }} é substituído pelo valor enviado pelo servidor --}}
       <p>{{this.name}}</p>
     </div>
+  {{!-- fim do loop each --}}
   {{/each}}
 
 </div>

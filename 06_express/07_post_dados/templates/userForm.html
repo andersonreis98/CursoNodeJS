@@ -1,16 +1,29 @@
 <!doctype html>
+<!-- declara que o documento é HTML5 -->
+<!-- elemento raiz da página; "lang" indica o idioma -->
 <html lang="en">
+	<!-- cabeçalho: informações da página que não aparecem no corpo -->
 	<head>
+		<!-- codificação de caracteres (UTF-8 aceita acentos) -->
 		<meta charset="UTF-8" />
+		<!-- deixa a página responsiva em celulares -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- título que aparece na aba do navegador -->
 		<title>Adicionar Usuário</title>
 	</head>
+	<!-- corpo: tudo que aparece na tela -->
 	<body>
+		<!-- título principal -->
 		<h1>Adicionar Usuário</h1>
+		<!-- formulário que envia os dados para "/users/save" usando o método POST -->
 		<form action="/users/save" method="POST">
+			<!-- bloco que agrupa os campos do formulário -->
 			<div>
+				<!-- campo de entrada; o valor chega no servidor com o nome "name" -->
 				<input type="text" id="name" name="name" placeholder="Digite o nome" required />
+				<!-- campo do tipo number; o valor chega no servidor com o nome "age" -->
 				<input type="number" name="age" id="age" placeholder="Digite a idade" required />
+				<!-- botão que envia o formulário -->
 				<input type="submit" value="Cadastrar" />
 			</div>
 		</form>
